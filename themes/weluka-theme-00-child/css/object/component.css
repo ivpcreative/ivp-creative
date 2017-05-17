@@ -1,0 +1,201 @@
+/* 
+http://www.tam-tam.co.jp/tipsnote/html_css/post10205.html
+Componentレイヤー
+Componentレイヤーは多くのプロジェクトで横断的に再利用できるような小さな単位のモジュールが該当します。OOCSSの構造の機能を担い、固有のサイズや装飾的なスタイルを極力含まないようにします。
+※通常、接頭語にc- が必要だが、ここでは、前CSS構造の sub-common.css の内容を引き継ぐ。
+*/
+
+
+/*TOPに戻るボタン*/
+#pageTop {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+}
+
+#pageTop a {
+    display: block;
+    z-index: 9999;
+    padding: 10px 0 0 1px;
+    border-radius: 3px;
+    width: 53px;
+    height: 53px;
+    background-color: #00718e;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+#pageTop a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+/* share button */
+.share-btns {
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: 40px;
+    padding :0 10px;
+    text-align: center;
+}
+.share-btns ul {
+	margin: 0;
+        display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px !important; 
+}
+.share-btns-item {
+	float: left;
+	list-style: outside none none;
+	margin: 0px 10px;
+	width: 40%;
+}
+.share-btns-item .fa {
+	width: 16px;
+}
+.share-btn {
+	color: #fff !important;
+	display: block;
+	font-size: 14px;
+	padding: 20px 0;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+}
+.share-btn.fb {
+	background: #295993 none repeat scroll 0 0;
+}
+.share-btn.twitter {
+	background: #00acec none repeat scroll 0 0;
+}
+.share-btn.hatena {
+	background: #008fde none repeat scroll 0 0;
+}
+.share-btn.gplus {
+	background: #de4d3e none repeat scroll 0 0;
+}
+
+/* end.share button */
+
+/*contact form 7*/
+.contactform-accept {
+    text-align: center;
+}
+ form.wpcf7-form p {
+    margin: 1.5rem 0;
+}
+
+.contactform-btn-send {
+    text-align: center;
+}
+.contactform-btn-send-skin .weluka-btn {
+    padding: 5px 60px;
+}
+
+#main-content .wpcf7 h3{
+        color: #004b64;
+    font-size: 16px;
+    border:0px;
+}
+
+.wpcf7 .another-form{
+  background: #fafafa none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 0 0 30px;
+    padding: 5px;
+}
+
+
+.wpcf7 .c-wpcf7-1form{ /*名前等70%列*/
+    width:70%;
+}
+.wpcf7 .c-wpcf7-2form{ /*名前等2列*/
+    width:45%;
+}
+.wpcf7 .c-wpcf7-3form{ /*名前等2列*/
+    width:28%;
+}
+.wpcf7 .c-wpcf7-4form{ /*名前等2列*/
+    width:19%;
+}
+
+.wpcf7 form.wpcf7-form .c-wpcf7-name{
+    margin-bottom: 0px;
+}
+.wpcf7 form.wpcf7-form .c-wpcf7-input{
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+
+/* SearchWindow */
+.search-submit { 
+   -moz-user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+.search-submit:hover,.search-submit:active { 
+ color: #fff;
+ background-color: #303030;
+ border-color: #3c3c3c ;
+}
+
+/* ハンバーガーメニュー調整 767以下(特殊モバイル用設定)*/
+@media (max-width: 767px) {
+    .header-menu-clm .weluka-wpmenu {
+        position: relative;
+    }
+    /*.header-menu-clm .navbar-header*/
+    .header-menu-clm .navbar-header {
+        // position: fixed; /*ついてくるヘッダ用*/
+        position: relative;
+        z-index: 999;
+        width: 100%;
+        left: 0;
+        top: -90px;
+    }
+    . weluka-nav-bar-v {
+        /*display: none;
+        メニューの表示非表示の操作はwekukaに直接設定
+        */
+        background-color: #252525;
+    }
+
+    .navbar-header{
+            background-image: url("/wp-content/uploads/nav/line-sp.png");/*.lr-navbar の背景でも設定しているが、メニューオープン時に必要*/
+    }
+    .weluka-nav-bar-h,.navbar-collapse {
+        background-color: #fff;
+    }
+}
+
+
+
+ /* 768px以上 は非表示*/
+@media (min-width: 768px) {
+    .navbar-brand {
+        display: none;
+    }
+    .share-btns {
+    padding :0 50px;
+    }
+    
+}
+

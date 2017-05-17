@@ -1,0 +1,9 @@
+plugins/*
+backup-*/
+*-*x*.*
+*media-from-ftp-tmp/
+*backwpup*/
+*backups/
+*/blog-news/*
+languages/*
+themes/weluka-theme-00/*

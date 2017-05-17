@@ -1,0 +1,89 @@
+/* fundation
+FoundationレイヤーはNormalize.cssやリセットCSS、要素セレクタ・属性セレクタのような最低限のスタイルを指定します。詳細度を極力弱く、影響範囲を極力狭くします。
+*/
+
+
+/*デフォルト設定変更*/
+html {
+    font-size: 45.0%; //スマホの倍率、PCはメディアクエリに記載
+}
+
+body {
+    font-family: Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", YuGothic, "游ゴシック", Meiryo, "メイリオ", Verdana, "ＭＳ Ｐゴシック", sans-serif;
+    color: #000; 
+    background-color: #fff;
+    font-size: 1.8rem; /*スマホ用 PCはメディアクエリに記載*/
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    //margin: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
+/* contact form7 style.css を上書き */
+ .wpcf7 input[type="text"],  .wpcf7 input[type="email"],  .wpcf7 input[type="url"],  .wpcf7 input[type="password"],  .wpcf7 input[type="search"],  .wpcf7 input[type="tel"],  .wpcf7 input[type="datetime"],  .wpcf7 input[type="date"],  .wpcf7 input[type="month"],  .wpcf7 input[type="week"],  .wpcf7 input[type="time"],  .wpcf7 input[type="datetime-local"],  .wpcf7 input[type="number"], .wpcf7 textarea, .wpcf7 select {
+    display: inline;
+    font-size: 16px; 
+  
+}
+
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+a{
+    color: #00579C;
+    text-decoration: underline;
+}
+a:hover {
+    color: #002F55;
+  
+}
+/* table*/
+
+/*テーブルをスマホ時に構造を変化*/
+
+    /* table */
+    #main-content table th {
+        padding: 5px 5px 5px 10px;
+        text-align: left;
+        border: 1px solid #000;
+        background: #DFECF7;
+    }
+    #main-content table td {
+        border: 1px solid #000;
+        padding: 5px 5px 5px 10px;
+        text-align: left;
+    }
+    /* end.table */
+
+
+/* end.table*/
+
+
+/* 768px以上 */
+@media (min-width: 768px) {
+    html {
+        font-size: 60.5%;
+    }
+
+
+}

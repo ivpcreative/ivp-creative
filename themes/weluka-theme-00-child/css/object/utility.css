@@ -1,0 +1,45 @@
+/* 
+utilityレイヤー
+Utilityレイヤーはいわゆる汎用クラスのことで、ほとんどの場合で単一のスタイルを持っています。確実にスタイルを適応させるために!importantを指定します。
+Sass側ではレスポンシブにも対応できるように、@eachを使ったMixinを使っています。
+*/
+
+
+/*ほぼboostrapに依存*/
+/* テキストカラー */
+.pickup{
+	color: #FF0000;
+}
+
+.note{
+	color: #0000FF;
+}
+
+/* テキストおよび画像位置 */
+.img-webbtn{
+	margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align:left;
+}
+.text-right {
+    text-align:right;
+}
+
+/* 画像を真ん中配置 */
+.img-center{
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+
+}
+
+
+
+
+
+
