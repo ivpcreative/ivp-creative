@@ -27,8 +27,10 @@ jQuery(window).on('load resize', function () {
     if (window.matchMedia('screen and (min-width:768px)').matches) {
         //768px以上
         //行の高さをそろえるClass名を記載(jquery-fixHeightSimple.js)
+        /*
         jQuery(".home-middle-text").fixHeightSimple();
         jQuery(".challenge-body-text-fixheight").fixHeightSimple();
+        */
     }
 });
 /* end.lado & リサイズ*/
