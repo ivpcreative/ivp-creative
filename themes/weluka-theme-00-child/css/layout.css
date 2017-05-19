@@ -4,7 +4,19 @@ Layoutレイヤーはワイヤーフレームに定義されるような大き�
 welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr- 、とします。 
 */
 /*スマホでブレ対策*/
+
+
+#weluka-main-header {
+    padding: 1em 5em;
+}
+
+#main-content {
+    padding: 0.5em 3em;
+}
+
+
 @media (max-width: 991px) {
+	/*
     #main > .weluka-container-fluid,
     #main > .weluka-container {
         padding-left: 10px;
@@ -14,6 +26,7 @@ welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr-
         padding-left: 10px;
         padding-right: 10px;
     }
+    */
 }
 
 
