@@ -2,7 +2,7 @@
 /**
 子function.php(子→親 の順でread)
  */
-//同ディレクトリのstule.css を読み込む
+//同ディレクトリのstyle.css を読み込む
 //https://github.com/wckansai2016/plugin-hands-on/blob/master/plugin_hands_on_4.md
 function add_file_links() {
     wp_enqueue_style( 'child-foundation-css', get_stylesheet_directory_uri() .'/css/foundation.css' ); //CSS
@@ -10,26 +10,37 @@ function add_file_links() {
     wp_enqueue_style( 'child-object-utility-css', get_stylesheet_directory_uri() .'/css/object/utility.css' ); //CSS
     wp_enqueue_style( 'child-object-component-css', get_stylesheet_directory_uri() .'/css/object/component.css' ); //CSS
     wp_enqueue_style( 'child-object-project-css', get_stylesheet_directory_uri() .'/css/object/project.css' ); //CSS
-
-    wp_enqueue_style( 'child-sub-free-css', get_stylesheet_directory_uri() . '/css/sub-free.css' ); //CSS
     //wp_enqueue_script( 'child-library-jquery-fixHeightSimple', get_stylesheet_directory_uri() . '/js/library/jquery-fixHeightSimple.js' ); // 行の高さをそろえるプラグイン
     wp_enqueue_script( 'child-library-jquery-rwdImageMaps', get_stylesheet_directory_uri() . '/js/library/jquery.rwdImageMaps.min.js' ); // イメージマップをレスポンシブ対応させる
-    wp_enqueue_script( 'child-common-js', get_stylesheet_directory_uri() . '/js/sub-common-js.js' ); //JS
-    wp_enqueue_script( 'child-sub-free-js', get_stylesheet_directory_uri() . '/js/sub-free-js.js' ); //JS
-
+    wp_enqueue_script( 'child-common-js', get_stylesheet_directory_uri() . '/js/sub-common.js' ); //JS
+   
 }
 
+/*初期状態がhidden等、管理画面やwelukaでは表示させないファイル*/
+function add_file_links_front() {
+    wp_enqueue_style( 'child-front-css', get_stylesheet_directory_uri() .'/css/object/front.css' ); //CSS
+    wp_enqueue_script( 'child-front-js', get_stylesheet_directory_uri() . '/js/front.js' ); //JS
+}
+
+/*ユーザーが自由に記載できるCSS、JS。初期状態はカラ。*/
+function add_file_links_free() {
+    wp_enqueue_style( 'child-sub-free-css', get_stylesheet_directory_uri() . '/css/sub-free.css' ); //CSS
+    wp_enqueue_script( 'child-sub-free-js', get_stylesheet_directory_uri() . '/js/sub-free.js' ); //JS
+}
 
 
 //'wp_enqueue_scripts'はワードプレスに登録してあるスクリプトを読み込むタイミングで実行する。
 //→※wp_enqueue_scripts アクションフックは登録されているスクリプトを読み込むタイミングで実行されるものです。
 //上の関数を実行
-
-
 /*どのスタイルシートよりも遅く読ませるため、200 に設定*/
 add_action( 'wp_enqueue_scripts', 'add_file_links',200 );
 //管理が目のpost.php でも読み込ませる
 add_action('admin_head-post.php', 'add_file_links',200 );
+/*フロントのみ有効にしたいCSS/JS 重に初期状態がhiddenであるCSSやJS*/
+add_action( 'wp_enqueue_scripts', 'add_file_links_front',300 );
+/*ユーザーが自由に記載できるCSS、JS。初期はカラ。不要ならばコメントアウト*/
+add_action( 'wp_enqueue_scripts', 'add_file_links_free',400 );
+add_action('admin_head-post.php', 'add_file_links_free',400 );
 
 
 /*リンクを絶対パスに変更*/
@@ -42,6 +53,8 @@ function delete_hostname_from_attachment_url( $url ) {
 }
 add_filter( 'wp_get_attachment_url', 'delete_hostname_from_attachment_url' );
 add_filter( 'attachment_link', 'delete_hostname_from_attachment_url' );
+
+
 
 /*固定ページにカテゴリ・タグを追加*/
 add_action('init', 'karakuri_add_category_to_page');
