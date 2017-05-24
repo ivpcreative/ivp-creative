@@ -6,15 +6,8 @@ welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr-
 /*スマホでブレ対策*/
 
 
-#weluka-main-header {
-    padding: 1em 5em;
-}
-
-#main-content {
-    padding: 0.5em 3em;
-}
-
-
+#weluka-main-header {padding: 1em 5em;}
+#main-content {padding: 0.5em 3em;}
 @media (max-width: 991px) {
 	/*
     #main > .weluka-container-fluid,
@@ -33,18 +26,32 @@ welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr-
 /* 
 Section 
 */
-
-
-
+.ls-top{}
+.ls-apply{padding:1rem;}
 /*
 Row
 */
+.lr-top--note{
+    
+}
+.lr-main{}
+.lr-main--bg01{
+}
+.lr-main--bg02{
+    background-color: #5bc0de;
+}
+.lr-main--bg03{
+    background-color: #ff5a40;
+}
 
 
 
 /*
 colmun
 */
+.lc-main--txt02{
+    color: #fff;
+}
 
 
 /* 768px以上(PC表示)*/

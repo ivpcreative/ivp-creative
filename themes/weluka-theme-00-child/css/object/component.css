@@ -111,8 +111,6 @@ Componentレイヤーは多くのプロジェクトで横断的に再利用で�
     margin: 0 0 30px;
     padding: 5px;
 }
-
-
 .wpcf7 .c-wpcf7-1form{ /*名前等70%列*/
     width:70%;
 }
@@ -125,7 +123,6 @@ Componentレイヤーは多くのプロジェクトで横断的に再利用で�
 .wpcf7 .c-wpcf7-4form{ /*名前等2列*/
     width:19%;
 }
-
 .wpcf7 form.wpcf7-form .c-wpcf7-name{
     margin-bottom: 0px;
 }
@@ -133,7 +130,6 @@ Componentレイヤーは多くのプロジェクトで横断的に再利用で�
     margin-top: 0px;
     margin-bottom: 2px;
 }
-
 
 /* SearchWindow */
 .search-submit { 
@@ -177,13 +173,38 @@ Componentレイヤーは多くのプロジェクトで横断的に再利用で�
         */
         background-color: #252525;
     }
-
     .navbar-header{
             background-image: url("/wp-content/uploads/nav/line-sp.png");/*.lr-navbar の背景でも設定しているが、メニューオープン時に必要*/
     }
     .weluka-nav-bar-h,.navbar-collapse {
         background-color: #fff;
     }
+}
+
+/*タイトル*/
+.c-ttl{display: block;margin-left: auto;margin-right: auto;
+}
+.c-ttl--right{
+     padding:20px 100px 10px 100px;
+}
+.c-ttl--left{
+        padding:20px 100px 10px 100px;
+}
+.c-body{
+    padding:20px;
+}
+.c-body--right{}
+.c-body--left{}
+.c-body--center{
+    padding:10px 120px 10px 120px;   
+}
+
+
+/*問い合わせボタン*/
+.c-btn{} 
+.c-btn--apply01{
+    margin:0px;
+    width:300px;
 }
 
 

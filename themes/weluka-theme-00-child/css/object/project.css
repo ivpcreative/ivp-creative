@@ -3,7 +3,12 @@ http://www.tam-tam.co.jp/tipsnote/html_css/post10205.html
 Projectレイヤー
 Projectレイヤーはプロジェクト固有のスタイルが該当します。プロジェクトで使い回すスタイルのほとんどはProjectレイヤーに追加することになります。
 ※接頭語に p- が必要だが、sub-free.css を引き継ぐため、これに限らない。
-
+*/
+.p-top--note{
+    margin:0px;
+    text-align: center;
+    
+}
 
 /* 768px以上 */
 @media (min-width: 768px) {
