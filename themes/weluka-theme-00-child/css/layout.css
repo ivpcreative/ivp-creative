@@ -6,7 +6,7 @@ welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr-
 /*スマホでブレ対策*/
 
 
-#weluka-main-header {padding: 1em 5em;}
+
 #main-content {padding: 0.5em 3em;}
 @media (max-width: 991px) {
 	/*
@@ -57,6 +57,6 @@ colmun
 /* 768px以上(PC表示)*/
 
 @media (min-width: 768px) {
-    
+    #weluka-main-header {padding: 1em 5em;}
 
 }
