@@ -8,6 +8,7 @@ Projectレイヤーはプロジェクト固有のスタイルが該当します�
 .p-top--note {
     margin: 0px;
     text-align: center;
+
 }
 
 .p-btn-contact {
@@ -20,15 +21,21 @@ Projectレイヤーはプロジェクト固有のスタイルが該当します�
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+        cursor : pointer;
+}
+
+/*マウスオーバーで光る*/
+.p-btn-contact:hover{
+opacity:0.7;
+filter:alpha(opacity=70);
+-ms-filter: “alpha( opacity=70 )”;
 }
 
 .p-btn-contact--header {
     background: #f6692a url("/wp-content/uploads/icon/icon-mail-small.png") no-repeat scroll 5px 8px;
     height: 40px;
     width: 170px;
-
 }
-
 .p-btn-contact--middle {
     background: #f6692a url("/wp-content/uploads/icon/icon-mail-middle.png") no-repeat scroll 20px 20px;
     background-size: 200px;

@@ -15,14 +15,27 @@ jQuery(function () {
     //レスポンシブにてイメージマップのリンクずれを自動修正する
     jQuery('img[usemap]').rwdImageMaps();
     
-    /*scrollするとヘッダ透過*/
+  
   jQuery(window).scroll(function() {
+        /*scrollするとヘッダ透過*/
     if (jQuery(this).scrollTop() > 0) {
       jQuery('header').css('opacity', 0.8);
     } else {
       jQuery('header').css('opacity', 1);
     }
+      /*scrollするとlc-main へ scrollin を追加(ふわっと表示用)*/
+      jQuery('.lr-main').each(function(){
+            var elemPos = jQuery(this).offset().top;
+            var scroll = jQuery(window).scrollTop();
+            var windowHeight = jQuery(window).height();
+            if (scroll > elemPos - windowHeight + 200){
+                jQuery(this).addClass('scrollin');
+            }
+        });
+      
   });
+    
+    
 });
 /*end.load時にkick*/
 
@@ -89,7 +102,6 @@ var CommonSubJs = function () {
                         //---- 画面が特定の範囲内にスクロールするとボタン表示
                         topBtn.fadeIn();
                     } else {
-
                         //---- ボタン非表示
                         topBtn.fadeOut();
                     }

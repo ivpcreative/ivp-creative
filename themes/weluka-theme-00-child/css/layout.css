@@ -26,17 +26,23 @@ welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr-
 /* 
 Section 
 */
-.ls-top{padding: 0.5rem 0rem}
+.ls-top{
+    padding: 0.5rem 0rem
+}
+.ls-main{
+    margin:10px;
+}
 .ls-apply{padding:1rem;}
 /*
 Row
 */
-.lr-top--note{
-    
-}
+
+
 .lr-main{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
+
+
 .lr-main--bg01{
 }
 .lr-main--bg02{
@@ -44,6 +50,9 @@ Row
 }
 .lr-main--bg03{
     background-color: #ff5a40;
+}
+.lr-main--bg04{
+    margin-bottom: 10px;
 }
 .lr-apply{
     margin-bottom: 30px;
