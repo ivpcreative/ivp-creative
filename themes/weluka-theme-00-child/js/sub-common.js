@@ -5,19 +5,24 @@ sub-common-js.js
 
 /*load時にKICK*/
 jQuery(function () {
-
     jQuery('.animation2').css('visibility', 'hidden'); //スクロールアニメーションのパーツを非表示
     CommonSubObj = new CommonSubJs();
     CommonSubObj.PageTop();
-
     /*
     var spMode = true;
     spMode = subJsObj.getBlnSp();
   */
-
     //レスポンシブにてイメージマップのリンクずれを自動修正する
     jQuery('img[usemap]').rwdImageMaps();
-
+    
+    /*scrollするとヘッダ透過*/
+  jQuery(window).scroll(function() {
+    if (jQuery(this).scrollTop() > 0) {
+      jQuery('header').css('opacity', 0.8);
+    } else {
+      jQuery('header').css('opacity', 1);
+    }
+  });
 });
 /*end.load時にkick*/
 

@@ -14,6 +14,9 @@ Sass側ではレスポンシブにも対応できるように、@eachを使っ�
 .note{
 	color: #0000FF;
 }
+.u-bg-highlight{
+    background-color: #fce519;
+}
 
 /* テキストおよび画像位置 */
 .img-webbtn{
@@ -29,17 +32,12 @@ Sass側ではレスポンシブにも対応できるように、@eachを使っ�
 .text-right {
     text-align:right;
 }
-
+.img-att{
+    padding: 0 7em;
+}
 /* 画像を真ん中配置 */
 .img-center{
  display: block;
  margin-left: auto;
  margin-right: auto;
-
 }
-
-
-
-
-
-

@@ -185,10 +185,10 @@ Componentレイヤーは多くのプロジェクトで横断的に再利用で�
 .c-ttl{display: block;margin-left: auto;margin-right: auto;
 }
 .c-ttl--right{
-     padding:20px 100px 10px 100px;
+     padding:20px 10px 10px 10px;
 }
 .c-ttl--left{
-        padding:20px 100px 10px 100px;
+        padding:20px 10px 10px 10px;
 }
 .c-body{
     padding:20px;
@@ -196,8 +196,12 @@ Componentレイヤーは多くのプロジェクトで横断的に再利用で�
 .c-body--right{}
 .c-body--left{}
 .c-body--center{
+    /*
     padding:10px 120px 10px 120px;   
+    */
+    width:600px;
 }
+
 
 
 /*問い合わせボタン*/
@@ -206,6 +210,33 @@ Componentレイヤーは多くのプロジェクトで横断的に再利用で�
     margin:0px;
     width:300px;
 }
+
+.c-body--pt01{
+		background: URL('/wp-content/uploads/img/sp-img-wp-circle.png') no-repeat;
+		background-size: contain;
+		background-position: center; 
+	}
+
+	.c-ttl{
+     	padding: 0 1em; 
+	}
+
+	.weluka-img{
+		margin-top: 0;
+	}
+
+	.img-att{
+		padding: 0 7em;
+	}
+
+	.c-img--pt05{
+		padding: 0 10px;
+	}
+
+	.c-btn{
+		padding: 0 20px;
+	}	
+
 
 
 

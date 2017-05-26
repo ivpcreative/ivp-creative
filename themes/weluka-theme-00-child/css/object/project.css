@@ -10,6 +10,30 @@ Projectレイヤーはプロジェクト固有のスタイルが該当します�
     
 }
 
+.p-btn-contact{
+    background: #f6692a url("/wp-content/uploads/icon/sp-icon-mail.png") no-repeat scroll 5px 8px;
+    color: #fff;
+   scroll center center;
+    border-radius: 4px;
+    display: block;
+    height: 40px;
+ text-indent: -9999em;
+    transition: background 0.2s ease 0s;
+    width: 170px;
+}
+	.p-top--note p{
+		font-size: 1.8rem;
+		padding: 0 40px;
+	}
+
+	.p-note--body{
+		padding: 0 10px;
+	}
+
+	.p-note--body ul li{
+		padding-bottom: 10px;
+	}
+
 /* 768px以上 */
 @media (min-width: 768px) {
 

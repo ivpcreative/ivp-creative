@@ -4,9 +4,6 @@ Layoutレイヤーはワイヤーフレームに定義されるような大き�
 welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr- 、とします。 
 */
 /*スマホでブレ対策*/
-
-
-
 #main-content {padding: 0.5em 3em;}
 @media (max-width: 991px) {
 	/*
@@ -23,10 +20,13 @@ welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr-
 }
 
 
+
+
+
 /* 
 Section 
 */
-.ls-top{}
+.ls-top{padding: 0.5rem 10rem}
 .ls-apply{padding:1rem;}
 /*
 Row
@@ -34,7 +34,9 @@ Row
 .lr-top--note{
     
 }
-.lr-main{}
+.lr-main{
+    margin-bottom: 50px;
+}
 .lr-main--bg01{
 }
 .lr-main--bg02{
@@ -43,7 +45,9 @@ Row
 .lr-main--bg03{
     background-color: #ff5a40;
 }
-
+.lr-apply{
+    margin-bottom: 30px;
+}
 
 
 /*
@@ -54,9 +58,39 @@ colmun
 }
 
 
+
+
 /* 768px以上(PC表示)*/
 
 @media (min-width: 768px) {
-    #weluka-main-header {padding: 1em 5em;}
+    #weluka-main-header {padding: 0.5rem 0.5rem;}
 
+    /* transition */
+    .weluka-custom-header,
+    .weluka-custom-header:after,{
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+    }
+    
+    /*header 固定時*/
+    .headroom--not-top{
+    padding-top: 0px;
+    padding-bottom:0px;
+    background: rgba(255,255,255,.7);
+    }
+    .headroom--not-top {
+        font-size: 1.5rem;
+        color: #333;
+    }
+    .headroom--not-top .logo--header{
+        width:150px;
+    }
+    .headroom--not-top .nav--header{
+        font-size: 1.5rem;
+    }
+    
+    
+    
 }
