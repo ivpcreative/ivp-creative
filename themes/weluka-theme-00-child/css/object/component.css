@@ -221,14 +221,6 @@ Componentレイヤーは多くのプロジェクトで横断的に再利用で�
      	padding: 0 1em; 
 	}
 
-	.weluka-img{
-		margin-top: 0;
-	}
-
-	.img-att{
-		padding: 0 7em;
-	}
-
 	.c-img--pt05{
 		padding: 0 10px;
 	}
@@ -236,9 +228,6 @@ Componentレイヤーは多くのプロジェクトで横断的に再利用で�
 	.c-btn{
 		padding: 0 20px;
 	}	
-
-
-
 
  /* 768px以上 は非表示*/
 @media (min-width: 768px) {

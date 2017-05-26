@@ -4,38 +4,60 @@ Projectレイヤー
 Projectレイヤーはプロジェクト固有のスタイルが該当します。プロジェクトで使い回すスタイルのほとんどはProjectレイヤーに追加することになります。
 ※接頭語に p- が必要だが、sub-free.css を引き継ぐため、これに限らない。
 */
-.p-top--note{
-    margin:0px;
+
+.p-top--note {
+    margin: 0px;
     text-align: center;
-    
 }
 
-.p-btn-contact{
-    background: #f6692a url("/wp-content/uploads/icon/sp-icon-mail.png") no-repeat scroll 5px 8px;
+.p-btn-contact {
     color: #fff;
-   scroll center center;
+    scroll center center;
     border-radius: 4px;
     display: block;
-    height: 40px;
- text-indent: -9999em;
+    text-indent: -9999em;
     transition: background 0.2s ease 0s;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.p-btn-contact--header {
+    background: #f6692a url("/wp-content/uploads/icon/icon-mail-small.png") no-repeat scroll 5px 8px;
+    height: 40px;
     width: 170px;
+
 }
-	.p-top--note p{
-		font-size: 1.8rem;
-		padding: 0 40px;
-	}
 
-	.p-note--body{
-		padding: 0 10px;
-	}
+.p-btn-contact--middle {
+    background: #f6692a url("/wp-content/uploads/icon/icon-mail-middle.png") no-repeat scroll 20px 20px;
+    background-size: 200px;
+    height: 80px;
+    width: 250px;
+}
 
-	.p-note--body ul li{
-		padding-bottom: 10px;
-	}
+.p-top--note p {
+    font-size: 1.8rem;
+    padding: 0 40px;
+}
 
+.p-note--body {
+    padding: 0 10px;
+}
+
+.p-note--body ul li {
+    padding-bottom: 10px;
+}
+
+.navbar-toggle{
+    margin-top: 20px;
+}
 /* 768px以上 */
+
 @media (min-width: 768px) {
-
+    .p-btn-contact--middle {
+        background-size: 300px;
+        height: 120px;
+        width: 350px;
+    }
 }
-

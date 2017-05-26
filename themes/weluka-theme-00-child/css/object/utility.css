@@ -7,16 +7,24 @@ Sass側ではレスポンシブにも対応できるように、@eachを使っ�
 
 /*ほぼboostrapに依存*/
 /* テキストカラー */
-.pickup{
+.u-font-pickup{
 	color: #FF0000;
 }
 
-.note{
+.u-font-note{
 	color: #0000FF;
 }
+
+.u-font-black{
+    color: #000;
+}
+
+
+/*Yellow ハイライト*/
 .u-bg-highlight{
     background-color: #fce519;
 }
+
 
 /* テキストおよび画像位置 */
 .img-webbtn{

@@ -26,7 +26,7 @@ welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr-
 /* 
 Section 
 */
-.ls-top{padding: 0.5rem 10rem}
+.ls-top{padding: 0.5rem 0rem}
 .ls-apply{padding:1rem;}
 /*
 Row
@@ -35,7 +35,7 @@ Row
     
 }
 .lr-main{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .lr-main--bg01{
 }
@@ -58,12 +58,16 @@ colmun
 }
 
 
+/*ヘッダスクロール時*/
+    .headroom--not-top .lc-header--logo{
+        display: none;
+    } 
 
 
 /* 768px以上(PC表示)*/
 
 @media (min-width: 768px) {
-    #weluka-main-header {padding: 0.5rem 0.5rem;}
+    #weluka-main-header {padding: 1rem 0.5rem 0.5rem 0.5rem; }
 
     /* transition */
     .weluka-custom-header,
@@ -80,6 +84,10 @@ colmun
     padding-bottom:0px;
     background: rgba(255,255,255,.7);
     }
+    
+    .headroom--not-top .lc-header--logo{
+        display: inline;
+    } 
     .headroom--not-top {
         font-size: 1.5rem;
         color: #333;
@@ -90,6 +98,15 @@ colmun
     .headroom--not-top .nav--header{
         font-size: 1.5rem;
     }
+    
+    .headroom--not-top .navbar-nav > li > a {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    }
+    .headroom--not-top  .cl-header-contact--pc .weluka-content{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
     
     
     
