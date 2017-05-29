@@ -53,8 +53,20 @@ filter:alpha(opacity=70);
 }
 
 .p-note--body ul li {
-    padding-bottom: 10px;
+    list-style: outside circle ;
+    padding: 10px 0 10px 5px;
+    text-indent: 0rem;
 }
+
+.p-txt-contact{
+    
+}
+
+.p-txt-contact--middle{
+    color: #f6692a; 
+    text-align: center;
+}
+
 
 .navbar-toggle{
     margin-top: 20px;

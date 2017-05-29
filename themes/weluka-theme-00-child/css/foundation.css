@@ -5,14 +5,14 @@ FoundationレイヤーはNormalize.cssやリセットCSS、要素セレクタ・
 
 /*デフォルト設定変更*/
 html {
-    font-size: 45.0%; //スマホの倍率、PCはメディアクエリに記載
+    font-size: 62.5%; //スマホの倍率、PCはメディアクエリに記載
 }
 
 body {
     font-family:  Meiryo, "メイリオ",Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", YuGothic, "游ゴシック", Verdana, "ＭＳ Ｐゴシック", sans-serif;
     color: #4c4c4c; 
     background-color: #fff;
-    font-size: 1.8rem; /*スマホ用 PCはメディアクエリに記載*/
+    font-size: 1.6rem; /*スマホ用 PCはメディアクエリに記載*/
 }
 
 .h1,
@@ -81,8 +81,8 @@ a:hover {
 
 /* 768px以上 */
 @media (min-width: 768px) {
-    html {
-        font-size: 60.5%;
+    body {
+        font-size: 1.8rem;
     }
 
 

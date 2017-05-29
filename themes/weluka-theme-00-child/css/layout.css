@@ -3,10 +3,12 @@ Layoutレイヤー
 Layoutレイヤーはワイヤーフレームに定義されるような大きな単位のコンテナブロックが該当します。このレイヤー以降はクラスセレクタのみを指定します。例外として、このLayoutレイヤーにだけは必要に応じてIDセレクタを指定することもできます。
 welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr- 、とします。 
 */
+
+
 /*スマホでブレ対策 */
 
 @media (max-width: 991px) {
-	/*
+    /*
     #main > .weluka-container-fluid,
     #main > .weluka-container {
         padding-left: 10px;
@@ -20,113 +22,128 @@ welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr-
 }
 
 
-
-
-
 /* 
 Section 
 */
-.ls-top{
+
+.lr-main,
+.ls-note,
+.lc-sub {
+    padding: 0 1rem;
+}
+
+.lr-main{
+    margin-bottom: 3rem;
+}
+
+.ls-top {
     padding: 0.5rem 0rem
 }
-.ls-main{
-    margin:10px;
+
+.ls-contact {
+    padding: 1rem;
 }
-.ls-apply{padding:1rem;}
+
+.ls-sub {}
+
+.ls-sub--pt01 {}
+
+
 /*
 Row
 */
 
+.lr-main--bg01 {}
 
-.lr-main{
-    margin-bottom: 40px;
-}
-
-
-.lr-main--bg01{    
-}
-.lr-main--bg02{
+.lr-main--bg02 {
     background-color: #39ACCD;
 }
-.lr-main--bg03{
+
+.lr-main--bg03 {
     background-color: #39ACCD;
 }
-.lr-main--bg04{
+
+.lr-sub--bg04 {
     margin-bottom: 10px;
     background: #ffd063;
 }
-.lr-apply{
+
+.lr-apply {
     margin-bottom: 30px;
 }
-
-
-
 
 /*
 colmun
 */
-.lc-main--txt02{
+
+.lc-main--txt02 {
     color: #fff;
 }
 
-
-
 /*ヘッダスクロール時*/
-    .headroom--not-top .lc-header--logo{
-        display: none;
-    } 
+.headroom--not-top .lc-header--logo {
+    display: none;
+}
 
 
-/* 768px以上(PC表示)*/
+/* 768px以上(スマホ以外表示)*/
 
 @media (min-width: 768px) {
-    #main-content {padding: 0.5rem 0rem;}
-    #weluka-main-header {padding: 1rem 0.5rem 0.5rem 0.5rem; }
-
+    #main-content {
+        padding: 0.5rem 0rem;
+    }
+    #weluka-main-header {
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+    .lr-main,
+    .ls-note,
+    .lc-sub {
+        padding: 0.5rem 5rem;
+    }
     /* transition */
     .weluka-custom-header,
-    .weluka-custom-header:after,{
+    .weluka-custom-header:after,
+    {
         transition: all 0.3s ease;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
     }
-    
     /*header 固定時*/
-    .headroom--not-top{
-    padding-top: 0px;
-    padding-bottom:0px;
-    background: rgba(255,255,255,.7);
+    .headroom--not-top {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        background: rgba(255, 255, 255, .7);
     }
-    
-    .headroom--not-top .lc-header--logo{
+    .headroom--not-top .lc-header--logo {
         display: inline;
-    } 
+    }
     .headroom--not-top {
         font-size: 1.5rem;
         color: #333;
     }
-    .headroom--not-top .logo--header{
-        width:150px;
+    .headroom--not-top .logo--header {
+        width: 150px;
     }
-    .headroom--not-top .nav--header{
+    .headroom--not-top .nav--header {
         font-size: 1.5rem;
     }
-    
     .headroom--not-top .navbar-nav > li > a {
-    padding-bottom: 5px;
-    padding-top: 5px;
+        padding-bottom: 5px;
+        padding-top: 5px;
     }
-    .headroom--not-top  .cl-header-contact--pc .weluka-content{
-    margin-top: 5px;
-    margin-bottom: 5px;
+    .headroom--not-top .cl-header-contact--pc .weluka-content {
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
-
-
-    .lr-main--bg01,.lr-main--bg02,.lr-main--bg03,.lr-main--bg04,.ls-note{
-    padding: 0 4em;
 }
-    
-    
-    
+
+
+/*992px以上*/
+@media (min-width: 992px) {
+    .lr-main,
+    .ls-note,
+    .lc-sub {
+        padding: 1rem 20rem;
+    }
 }

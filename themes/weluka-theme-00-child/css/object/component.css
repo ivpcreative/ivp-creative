@@ -191,7 +191,7 @@ Componentレイヤーは多くのプロジェクトで横断的に再利用で�
         padding:20px 10px 10px 10px;
 }
 .c-body{
-    padding:20px;
+    padding:2rem;
 }
 .c-body--right{}
 .c-body--left{}
@@ -216,7 +216,9 @@ Componentレイヤーは多くのプロジェクトで横断的に再利用で�
 		background-size: contain;
 		background-position: center; 
 	}
-
+.c-body--pt06{
+    text-align: center;
+}
 	.c-ttl{
         width:100%
 	}
