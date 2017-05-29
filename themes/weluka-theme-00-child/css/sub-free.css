@@ -10,8 +10,27 @@
 	background: #ffd063;
 }
 
+.weluka-img{
+	margin: 0;
+}
+
+.lc-main--img02{
+	margin-bottom: 0;
+}
+
+
+
 /* 768px以上 */
 @media (min-width: 768px) {
+
+	.weluka-container,.lr-main--bg04{
+		width: 100%;
+	}
+
+	.ls-top, .ls-apply,.c-body,.ls-note,.header-row{
+		width: 1170px;
+		margin: auto;
+	}
 
 }
 
