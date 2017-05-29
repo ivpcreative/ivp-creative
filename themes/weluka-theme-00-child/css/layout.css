@@ -3,8 +3,8 @@ Layoutレイヤー
 Layoutレイヤーはワイヤーフレームに定義されるような大きな単位のコンテナブロックが該当します。このレイヤー以降はクラスセレクタのみを指定します。例外として、このLayoutレイヤーにだけは必要に応じてIDセレクタを指定することもできます。
 welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr- 、とします。 
 */
-/*スマホでブレ対策*/
-#main-content {padding: 0.5em 3em;}
+/*スマホでブレ対策 */
+
 @media (max-width: 991px) {
 	/*
     #main > .weluka-container-fluid,
@@ -46,10 +46,10 @@ Row
 .lr-main--bg01{
 }
 .lr-main--bg02{
-    background-color: #5bc0de;
+    background-color: #39ACCD;
 }
 .lr-main--bg03{
-    background-color: #ff5a40;
+    background-color: #39ACCD;
 }
 .lr-main--bg04{
     margin-bottom: 10px;
@@ -76,6 +76,7 @@ colmun
 /* 768px以上(PC表示)*/
 
 @media (min-width: 768px) {
+    #main-content {padding: 0.5rem 0rem;}
     #weluka-main-header {padding: 1rem 0.5rem 0.5rem 0.5rem; }
 
     /* transition */
