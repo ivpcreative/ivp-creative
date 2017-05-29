@@ -6,6 +6,10 @@
 	color: red;
 }
 
+.lr-main--bg04{
+	background: #ffd063;
+}
+
 /* 768px以上 */
 @media (min-width: 768px) {
 
