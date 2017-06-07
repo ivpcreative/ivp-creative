@@ -1,5 +1,5 @@
 <?php
-/**
+/*
 子function.php(子→親 の順でread)
  */
 //同ディレクトリのstyle.css を読み込む
@@ -13,8 +13,10 @@ function add_file_links() {
     //wp_enqueue_script( 'child-library-jquery-fixHeightSimple', get_stylesheet_directory_uri() . '/js/library/jquery-fixHeightSimple.js' ); // 行の高さをそろえるプラグイン
     wp_enqueue_script( 'child-library-jquery-rwdImageMaps', get_stylesheet_directory_uri() . '/js/library/jquery.rwdImageMaps.min.js' ); // イメージマップをレスポンシブ対応させる
     wp_enqueue_script( 'child-common-js', get_stylesheet_directory_uri() . '/js/sub-common.js' ); //JS
-   
+
 }
+
+
 
 /*初期状態がhidden等、管理画面やwelukaでは表示させないファイル*/
 function add_file_links_front() {
@@ -86,39 +88,6 @@ add_action( 'wp_footer', 'add_wp_footer_custom', 1 );
 
 
 /*-------------------------------------------*/
-/*  ショートコードで治療法ページ共通のアンカーリンクを呼び出す
-/*-------------------------------------------*/
-function getTherapyAnc() {
-/* ボタンを変数化*/
-$ankerlink = <<<EOT
-<ul class="list-line">
-<li><a class="menu" href="#comment">治療法の解説</a></li>
-<li><a class="menu" href="#flow">治療当日の流れ</a></li>
-<li><a class="menu" href="#point">治療のポイント</a></li>
-<li><a class="menu" href="#price">料金</a></li>
-</ul>
-EOT;
-
-return $ankerlink ;
-}
-add_shortcode('therapy-anc', 'getTherapyAnc');
-
-/*-------------------------------------------*/
-/*  ショートコードでWEBボタンを呼び出す
-/*-------------------------------------------*/
-function getBtnWeb() {
-/* ボタンを変数化*/
-$ankerlink = <<<EOT
-<a href="/mail_reservation/">
-<img class="img-responsive img-webbtn" src="/wp-content/uploads/nav/ico-contact01.png" alt="" width="" height="">
-</a>
-EOT;
-
-return $ankerlink ;
-}
-add_shortcode('btn-web', 'getBtnWeb');
-
-/*-------------------------------------------*/
 /*  ショートコードでカテゴリ一覧を呼び出す
 /*-------------------------------------------*/
 
@@ -132,19 +101,19 @@ function getCatItems($atts, $content = null) {
 	  "cat" => '12',
       "body" => 'true'
 	), $atts));
-	
+
 	// 処理中のpost変数をoldpost変数に退避
 	global $post;
 	$oldpost = $post;
-    
-   
+
+
     $cat_id = get_category_by_slug($cat);//スラッグをカテゴリIDに変換
     $cat_id = $cat_id->cat_ID;
-    
+
     //echo $cat_id."<br />";
 	// カテゴリーの記事データ取得
 	$myposts = get_posts('numberposts='.$num.'&order=DESC&orderby=post_date&category='.$cat_id);
-	
+
 	if($myposts) {
 		// 記事がある場合↓
 		$retHtml = '<div class="getPostDispArea">';
@@ -164,17 +133,17 @@ function getCatItems($atts, $content = null) {
 				// サムネイルがない場合↓※何も表示しない
 				$retHtml .= '';
 			}
-			
+
 			// 文章のみのエリアをdivで囲う
 			$retHtml .= '<div class="getPostStringArea">';
-			
+
 			// 投稿年月日を取得
 			$year = get_the_time('Y');	// 年
 			$month = get_the_time('n');	// 月
 			$day = get_the_time('j');	// 日
-			
+
 			//$retHtml .= '<span>この記事は' . $year . '年' . $month . '月' . $day . '日に投稿されました</span>';
-			
+
 			// タイトル設定(リンクも設定する)
 			$retHtml.= '<h4 class="getPostTitle">';
 			$retHtml.= '<a href="' . get_permalink() . '">' . the_title("","",false) . '</a>';
@@ -189,22 +158,76 @@ function getCatItems($atts, $content = null) {
 			$retHtml.= '<div class="getPostContent">' . $getString . '</div>';
             }
 			$retHtml.= '</div></div>';
-			
+
 		endforeach;
-		
+
 		$retHtml.= '</div>';
 	} else {
 		// 記事がない場合↓
 		$retHtml='<p>記事がありません。</p>';
 	}
-	
+
 	// oldpost変数をpost変数に戻す
 	$post = $oldpost;
-	
+
 	return $retHtml;
 }
 // 呼び出しの指定
 add_shortcode("getCategoryArticle", "getCatItems");
+
+//
+function shortcode_buttun($arg) {
+    extract(shortcode_atts(array (
+        'text' => 'お問い合わせ',
+        'href' => './',
+        'target' => '',
+        'type' => 'default'
+    ), $arg));
+    if($target != '') $target = ' target="'.$target.'"';
+  return '<button class="l-btn type-'.$type.'"><a href="'.$href.'"'.$target.'>'.$text.'</a></button>';
+}
+
+add_shortcode('button', 'shortcode_buttun');
+
+function get_site_info() {
+
+  $article_title = wp_title( ' | ', false, 'right' ) . get_bloginfo('name'); // 記事のタイトル
+  $site_info = array();
+	$site_info =  array(
+		'article_url' => get_permalink(),//記事のURL
+		'article_title' => $article_title, // 記事のタイトル
+		'article_url_encode' => urlencode(get_permalink()), // 記事URLエンコード
+    'article_title_encode' => urlencode($article_title.''), // 記事タイトルエンコード
+		'url_encode' => urlencode(get_permalink()),
+		'title_encode' => urlencode(get_the_title()),
+		'tw_title_encode' => urlencode(get_the_title()."")
+	 );
+  return $site_info;
+}
+
+function short_snsinfo($arg){
+   $site_info = get_site_info();
+  extract(shortcode_atts(array ( //パラメタ初期値
+    'sns' => 'tw',
+  ),$arg));
+
+  switch ($sns) {
+    case 'fb':
+    $snsLink = 'http://www.facebook.com/sharer.php?src=bm&u='.$site_info['url_encode'].'&t='.$site_info['article_title'];
+      break;
+    default: //twitter
+    $snsLink = 'https://twitter.com/intent/tweet?url='.$site_info['url_encode'].'&text='.$site_info['article_title_encode'];
+      break;
+  }
+
+return $snsLink;
+}
+add_shortcode('snsinfo', 'short_snsinfo');
+//テスト用
+function hogeFunc() {
+			return "ショートコード作ってみたよ。";
+		}
+		add_shortcode('hoge', 'hogeFunc');
 
 
 ?>

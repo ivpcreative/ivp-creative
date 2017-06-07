@@ -91,7 +91,7 @@ var CommonSubJs = function () {
         <p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p> 
         */
         this.PageTop = function () {
-                var topBtn = jQuery('#pageTop');
+                var topBtn = jQuery('js-fixlink--top');
                 topBtn.hide();
                 //◇ボタンの表示設定
                 jQuery(window).scroll(function () {
