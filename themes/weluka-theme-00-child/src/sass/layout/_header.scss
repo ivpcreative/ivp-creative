@@ -1,0 +1,40 @@
+/*
+Layout_header
+welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr- 、とします。
+*/
+
+/*ヘッダスクロール時*/
+.headroom--not-top .lc-header--logo {
+    display: none;
+}
+
+/* 768px以上(スマホ以外表示)*/
+@media (min-width: 768px) {
+    /*header 固定時*/
+    .headroom--not-top {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        background: rgba(255, 255, 255, .7);
+    }
+    .headroom--not-top .lc-header--logo {
+        display: inline;
+    }
+    .headroom--not-top {
+        font-size: 1.5rem;
+        color: #333;
+    }
+    .headroom--not-top .logo--header {
+        width: 150px;
+    }
+    .headroom--not-top .nav--header {
+        font-size: 1.5rem;
+    }
+    .headroom--not-top .navbar-nav > li > a {
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .headroom--not-top .cl-header-contact--pc .weluka-content {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}

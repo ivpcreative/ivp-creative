@@ -1,0 +1,108 @@
+/*
+Layout＿main
+welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr- 、とします。
+*/
+
+@media (max-width: 991px) {
+    /*
+    #main > .weluka-container-fluid,
+    #main > .weluka-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .topnav-clm {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    */
+}
+
+/*
+Section
+*/
+
+.lr-main,
+.ls-note,
+.lc-sub {
+    padding: 0 1rem;
+}
+
+.lr-main {
+    margin-bottom: 3rem;
+}
+
+.ls-top {
+    padding: 0.5rem 0rem;
+}
+
+.ls-contact {
+    padding: 1rem;
+}
+
+/*
+Row
+*/
+
+.lr-main--bg02 {
+    background-color: #39ACCD;
+}
+
+.lr-main--bg03 {
+    background-color: #39ACCD;
+}
+
+.lr-sub--bg04 {
+    margin-bottom: 10px;
+    background: #ffd063;
+}
+
+.lr-apply {
+    margin-bottom: 30px;
+}
+
+
+/*
+colmun
+*/
+
+.lc-main--txt02 {
+    color: #fff;
+}
+
+/* 768px以上(スマホ以外表示)*/
+
+@media (min-width: 768px) {
+    #main-content {
+        padding: 0.5rem 0rem;
+    }
+    #weluka-main-header {
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+    .lr-main,
+    .ls-note,
+    .lc-sub {
+        padding: 0.5rem 5rem;
+    }
+    /* transition */
+    .weluka-custom-header,
+    .weluka-custom-header:after
+    {
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+    }
+}
+/*992px以上*/
+@media (min-width: 992px) {
+    .lr-main,
+    .ls-note,
+    .lc-sub {
+        padding: 1rem 20rem;
+    }
+    .single-post .weluka-container-fluid,
+    .archive .weluka-container-fluid {
+        max-width: 100%;
+        width: 1170px;
+    }
+}

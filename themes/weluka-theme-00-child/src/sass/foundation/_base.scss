@@ -1,16 +1,15 @@
-/* fundation
-FoundationレイヤーはNormalize.cssやリセットCSS、要素セレクタ・属性セレクタのような最低限のスタイルを指定します。詳細度を極力弱く、影響範囲を極力狭くします。
+/* fundation_base
 */
 
 
 /*デフォルト設定変更*/
 html {
-    font-size: 62.5%; //スマホの倍率、PCはメディアクエリに記載
+    font-size: 62.5%; /*スマホの倍率、PCはメディアクエリに記載*/
 }
 
 body {
     font-family:  Meiryo, "メイリオ",Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", YuGothic, "游ゴシック", Verdana, "ＭＳ Ｐゴシック", sans-serif;
-    color: #4c4c4c; 
+    color: #4c4c4c;
     background-color: #fff;
     font-size: 1.6rem; /*スマホ用 PCはメディアクエリに記載*/
 }
@@ -28,7 +27,6 @@ h4,
 h5,
 h6 {
     font-size: inherit;
-    //margin: inherit;
     font-weight: inherit;
     line-height: inherit;
     -webkit-margin-before: 0;
@@ -37,25 +35,52 @@ h6 {
     -webkit-margin-end: 0;
 }
 
+.single-post h1{
+    font-size: 2.125em;
+    line-height: 1.5;
+    margin: 0 0 1em;
+    padding: 0;
+}
 
-h2{
-    border-bottom: 2px solid #0074c1;
+.single-post h2::after,.category h2::after{
+    background-color: #3770ad;
+    bottom: -4px;
+    content: "";
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 20%;
+    z-index: 2;
+}
+
+.single-post h2,.category h2{
+    border-bottom: 4px solid #afafaf;
+    box-sizing: content-box;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 60px 0 30px;
+    padding: 0 0 10px;
+    position: relative;
+}
+.single-post h3{
     color: #0074c1;
-    font-size: 2.4rem;
+    font-size: 2.0rem;
     font-weight: bold;
     line-height: 32px;
-    margin: 0 0 15px;
+    margin: 0 0 10px;
     overflow: hidden;
-    padding: 10px 10px;
+    padding: 8px 8px;
 }
+
+/*コメント*/
+
 
 /* contact form7 style.css を上書き */
  .wpcf7 input[type="text"],  .wpcf7 input[type="email"],  .wpcf7 input[type="url"],  .wpcf7 input[type="password"],  .wpcf7 input[type="search"],  .wpcf7 input[type="tel"],  .wpcf7 input[type="datetime"],  .wpcf7 input[type="date"],  .wpcf7 input[type="month"],  .wpcf7 input[type="week"],  .wpcf7 input[type="time"],  .wpcf7 input[type="datetime-local"],  .wpcf7 input[type="number"], .wpcf7 textarea, .wpcf7 select {
     display: inline;
-    font-size: 16px; 
-  
-}
+    font-size: 16px;
 
+}
 
 p {
     margin-bottom: 1.2rem;
@@ -67,7 +92,7 @@ a{
 }
 a:hover {
     color: #002F55;
-  
+
 }
 /* table*/
 

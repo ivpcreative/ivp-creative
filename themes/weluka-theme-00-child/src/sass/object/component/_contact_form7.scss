@@ -1,0 +1,64 @@
+/*Component_contact_form7
+※通常、接頭語にc- が必要だが、ここでは、前CSS構造の sub-common.css の内容を引き継ぐ。
+*/
+
+/*contact form 7*/
+
+.contactform-accept {
+    text-align: center;
+}
+
+form.wpcf7-form p {
+    margin: 1.5rem 0;
+}
+
+.contactform-btn-send {
+    text-align: center;
+}
+
+.contactform-btn-send-skin .weluka-btn {
+    padding: 5px 60px;
+}
+
+#main-content .wpcf7 h3 {
+    color: #004b64;
+    font-size: 16px;
+    border: 0px;
+}
+
+.wpcf7 .another-form {
+    background: #fafafa none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 0 0 30px;
+    padding: 5px;
+}
+
+.wpcf7 .c-wpcf7-1form {
+    /*名前等70%列*/
+    width: 70%;
+}
+
+.wpcf7 .c-wpcf7-2form {
+    /*名前等2列*/
+    width: 45%;
+}
+
+.wpcf7 .c-wpcf7-3form {
+    /*名前等2列*/
+    width: 28%;
+}
+
+.wpcf7 .c-wpcf7-4form {
+    /*名前等2列*/
+    width: 19%;
+}
+
+.wpcf7 form.wpcf7-form .c-wpcf7-name {
+    margin-bottom: 0px;
+}
+
+.wpcf7 form.wpcf7-form .c-wpcf7-input {
+    margin-top: 0px;
+    margin-bottom: 2px;
+}

@@ -1,0 +1,112 @@
+/*Component_design
+※通常、接頭語にc- が必要
+*/
+
+/* ハンバーガーメニュー調整 767以下(特殊モバイル用設定)*/
+@media (max-width: 767px) {
+    .header-menu-clm .weluka-wpmenu {
+        position: relative;
+    }
+    /*.header-menu-clm .navbar-header*/
+    .header-menu-clm .navbar-header {
+        position: relative;
+        z-index: 999;
+        width: 100%;
+        left: 0;
+        top: -90px;
+    }
+    .weluka-nav-bar-v {
+        /*display: none;
+        メニューの表示非表示の操作はwekukaに直接設定
+        */
+        background-color: #252525;
+    }
+    .navbar-header {
+        background-image: url("/wp-content/uploads/nav/line-sp.png");
+        /*.lr-navbar の背景でも設定しているが、メニューオープン時に必要*/
+    }
+    .weluka-nav-bar-h,
+    .navbar-collapse {
+        background-color: #fff;
+    }
+}
+
+/*タイトル*/
+.c-ttl {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.c-ttl--right {
+    padding: 20px 10px 10px 10px;
+}
+
+.c-ttl--left {
+    padding: 20px 10px 10px 10px;
+}
+
+.c-body {
+    padding: 2rem;
+}
+
+.c-body--center {
+    /*
+    padding:10px 120px 10px 120px;
+    */
+    width: 600px;
+}
+
+
+.c-body--pt01 {
+    background: URL('/wp-content/uploads/img/sp-img-wp-circle.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.c-body--pt06 {
+    text-align: center;
+}
+
+.c-ttl {
+    width: 100%
+}
+
+.c-img--pt05 {
+    padding: 0 10px;
+}
+
+/* SearchWindow */
+.search-submit {
+    -moz-user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.search-submit:hover,
+.search-submit:active {
+    color: #fff;
+    background-color: #303030;
+    border-color: #3c3c3c;
+}
+
+/* 768px以上 */
+@media (min-width: 768px) {
+
+    .c-ttl {
+        width: 70%
+    }
+    .navbar-brand {
+        display: none;
+    }
+}

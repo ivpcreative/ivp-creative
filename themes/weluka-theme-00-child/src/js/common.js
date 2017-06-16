@@ -8,6 +8,9 @@ jQuery(function () {
     jQuery('.animation2').css('visibility', 'hidden'); //スクロールアニメーションのパーツを非表示
     CommonSubObj = new CommonSubJs();
     CommonSubObj.PageTop();
+    /* Welukaビルダーでこけるので、コメントアウト
+    CommonSubObj.snsImageFIx();
+    */
     /*
     var spMode = true;
     spMode = subJsObj.getBlnSp();
@@ -116,6 +119,28 @@ var CommonSubJs = function () {
             }
             //end. ■page topボタン
 
+              /*SNSの画像のホストネーム付与*/
+             this.snsImageFIx = function () {       
+                var protocol = window.location.protocol;
+                var hostname = window.location.hostname;
+                var sitetop = protocol +"//"+ hostname;
+                /*FB*/
+                var content = jQuery("meta[property='og:image']").attr('content');
+                if(content.indexOf(sitetop) == -1 && content.indexOf('/wp-content') != -1){
+                content = content.replace('/wp-content', sitetop+'/wp-content');
+                jQuery("meta[property='og:image']").attr('content',content);
+                }
+                /*Twitter*/
+                var content = jQuery("meta[name='twitter:image']").attr('content');
+                if(content.indexOf(sitetop) == -1 && content.indexOf('/wp-content') != -1){
+                content = content.replace('/wp-content', sitetop+'/wp-content');
+                jQuery("meta[name='twitter:image']").attr('content',content);
+                }
+             }
+                /*END SNSの画像のホストネーム付与*/   
+        
+        
+        
         /*sp判定(768をブレイクポイント)*/
         this.getBlnSp = function () {
                 var $win = jQuery(window);

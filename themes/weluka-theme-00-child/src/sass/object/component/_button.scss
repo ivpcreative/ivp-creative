@@ -1,0 +1,149 @@
+/*Component_button
+※通常、接頭語にc- が必要だが、ここでは、前CSS構造の sub-common.css の内容を引き継ぐ。
+*/
+
+/*TOPに戻るボタン*/
+.c-fixlink {
+    position: fixed;
+        right: 10px;
+}
+.c-fixlink--tw {
+    bottom: 90px;
+}
+.c-fixlink--fb {
+    bottom: 50px;
+}
+.c-fixlink--top {
+    bottom: 10px;
+}
+.c-fixlink a {
+    display: block;
+    z-index: 9999;
+    padding: 5px 0 0 1px;
+    border-radius: 3px;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+.c-fixlink--tw a{
+    background-color: #1dcaff;
+}
+.c-fixlink--fb a{
+    background-color: #3b5998;
+}
+.c-fixlink--top a{
+    background-color: #ff5a40;
+}
+
+.c-fixlink a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+}
+/* share button */
+
+.share-btns {
+    clear: both;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.share-btns ul {
+    margin: 0;
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px !important;
+}
+
+.share-btns-item {
+    float: left;
+    list-style: outside none none;
+    margin: 0px 10px;
+    width: 40%;
+}
+
+.share-btns-item .fa {
+    width: 16px;
+}
+
+.share-btn {
+    color: #fff !important;
+    display: block;
+    font-size: 14px;
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.share-btn.fb {
+    background: #295993 none repeat scroll 0 0;
+}
+
+.share-btn.twitter {
+    background: #00acec none repeat scroll 0 0;
+}
+
+.share-btn.hatena {
+    background: #008fde none repeat scroll 0 0;
+}
+
+.share-btn.gplus {
+    background: #de4d3e none repeat scroll 0 0;
+}
+
+/* end.share button */
+
+
+/*問い合わせボタン*/
+
+.c-body--pt01 {
+    background: URL('/wp-content/uploads/img/sp-img-wp-circle.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.c-body--pt06 {
+    text-align: center;
+}
+
+.c-ttl {
+    width: 100%
+}
+
+.c-img--pt05 {
+    padding: 0 10px;
+}
+
+
+
+/* 768px以上 */
+@media (min-width: 768px) {
+.c-fixlink--tw {
+    bottom: 150px;
+
+}
+.c-fixlink--fb {
+    bottom: 90px;
+}
+.c-fixlink--top {
+    bottom: 30px;
+}
+.c-fixlink a {
+    padding: 12px 0 0 1px;
+    width: 53px;
+    height: 53px;
+}
+
+  .share-btns {
+  padding: 0 50px;
+  }
+}
