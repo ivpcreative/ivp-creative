@@ -69,12 +69,17 @@ h6 {
 
 .single-post h3 {
   color: #0074c1;
-  font-size: 2.0rem;
+  font-size: 2.2rem;
   font-weight: bold;
   line-height: 32px;
   margin: 0 0 10px;
   overflow: hidden;
   padding: 8px 8px; }
+
+.single-post h4 {
+  color: #000000;
+  border-left: 8px solid #999999;
+  padding-left: 10px; }
 
 /*コメント*/
 /* contact form7 style.css を上書き */
@@ -107,7 +112,6 @@ a:hover {
   text-align: left; }
 
 /* end.table */
-/* end.table*/
 /* 768px以上 */
 @media (min-width: 768px) {
   body {
@@ -191,9 +195,7 @@ Section
 .ls-contact {
   padding: 1rem; }
 
-/*
-Row
-*/
+/*Row*/
 .lr-main--bg02 {
   background-color: #39ACCD; }
 
@@ -246,6 +248,14 @@ colmun
 Layout_sidebar
 welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr- 、とします。
 */
+.lc-side h3 {
+  background-color: #108f62;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1) inset;
+  color: #ffffff;
+  padding: 0.4em 0.65em;
+  position: relative; }
+
 /* ==========================================================================
  objectg
 ============================================================================*/
@@ -340,21 +350,6 @@ welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr-
   background: #de4d3e none repeat scroll 0 0; }
 
 /* end.share button */
-/*問い合わせボタン*/
-.c-body--pt01 {
-  background: URL("/wp-content/uploads/img/sp-img-wp-circle.png") no-repeat;
-  background-size: contain;
-  background-position: center; }
-
-.c-body--pt06 {
-  text-align: center; }
-
-.c-ttl {
-  width: 100%; }
-
-.c-img--pt05 {
-  padding: 0 10px; }
-
 /* 768px以上 */
 @media (min-width: 768px) {
   .c-fixlink--tw {

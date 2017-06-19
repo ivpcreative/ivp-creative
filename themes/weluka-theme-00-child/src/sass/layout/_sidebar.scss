@@ -2,3 +2,12 @@
 Layout_sidebar
 welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr- 、とします。
 */
+
+.lc-side h3{
+  background-color: rgb(16, 143, 98);
+border-radius: 6px;
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1) inset;
+color: #ffffff;
+padding: 0.4em 0.65em;
+position: relative;
+}

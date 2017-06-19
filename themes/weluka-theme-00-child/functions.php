@@ -5,17 +5,11 @@
 //同ディレクトリのstyle.css を読み込む
 //https://github.com/wckansai2016/plugin-hands-on/blob/master/plugin_hands_on_4.md
 function add_file_links() {
-  /*
-    wp_enqueue_style( 'child-foundation-css', get_stylesheet_directory_uri() .'/css/foundation.css' ); //CSS
-    wp_enqueue_style( 'child-layout-css', get_stylesheet_directory_uri() .'/css/layout.css' ); //CSS
-    wp_enqueue_style( 'child-object-utility-css', get_stylesheet_directory_uri() .'/css/object/utility.css' ); //CSS
-    wp_enqueue_style( 'child-object-component-css', get_stylesheet_directory_uri() .'/css/object/component.css' ); //CSS
-    wp_enqueue_style( 'child-object-project-css', get_stylesheet_directory_uri() .'/css/object/project.css' ); //CSS
-*/
+
 wp_enqueue_style( 'child-app-css', get_stylesheet_directory_uri() .'/dest/css/app.css' ); //CSS
     //wp_enqueue_script( 'child-library-jquery-fixHeightSimple', get_stylesheet_directory_uri() . '/js/library/jquery-fixHeightSimple.js' ); // 行の高さをそろえるプラグイン
-    wp_enqueue_script( 'child-library-jquery-rwdImageMaps', get_stylesheet_directory_uri() . 'dest/js/library/jquery.rwdImageMaps.min.js' ); // イメージマップをレスポンシブ対応させる
-    wp_enqueue_script( 'child-common-js', get_stylesheet_directory_uri() . 'dest/js/common.js' ); //JS
+    wp_enqueue_script( 'child-library-jquery-rwdImageMaps', get_stylesheet_directory_uri() . '/dest/js/library/jquery.rwdImageMaps.min.js' ); // イメージマップをレスポンシブ対応させる
+    wp_enqueue_script( 'child-common-js', get_stylesheet_directory_uri() . '/dest/js/common.js' ); //JS
 }
 
 /*初期状態がhidden等、管理画面やwelukaでは表示させないファイル*/
@@ -55,8 +49,6 @@ function delete_hostname_from_attachment_url( $url ) {
 }
 add_filter( 'wp_get_attachment_url', 'delete_hostname_from_attachment_url' );
 add_filter( 'attachment_link', 'delete_hostname_from_attachment_url' );
-
-
 
 /*固定ページにカテゴリ・タグを追加*/
 add_action('init', 'karakuri_add_category_to_page');

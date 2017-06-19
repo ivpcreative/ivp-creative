@@ -64,13 +64,22 @@ h6 {
 }
 .single-post h3{
     color: #0074c1;
-    font-size: 2.0rem;
+    font-size: 2.2rem;
     font-weight: bold;
     line-height: 32px;
     margin: 0 0 10px;
     overflow: hidden;
     padding: 8px 8px;
 }
+
+.single-post h4{
+  color: #000000;
+  border-left: 8px solid #999999;
+    padding-left: 10px;
+}
+
+
+
 
 /*コメント*/
 
@@ -111,9 +120,6 @@ a:hover {
         text-align: left;
     }
     /* end.table */
-
-
-/* end.table*/
 
 
 /* 768px以上 */
