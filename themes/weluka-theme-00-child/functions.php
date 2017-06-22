@@ -89,8 +89,8 @@ add_action( 'wp_footer', 'add_wp_footer_custom', 1 );
 // 呼び出し元での指定も可能 -> [getCategoryArticle num="x" cat="y" body="true"]
 function getCatItems($atts, $content = null) {
 	extract(shortcode_atts(array(
-	  "num" => '2',
-	  "cat" => '12',
+	  "num" => '3',
+	  "cat" => 'blog',
       "body" => 'true'
 	), $atts));
 
@@ -108,26 +108,26 @@ function getCatItems($atts, $content = null) {
 
 	if($myposts) {
 		// 記事がある場合↓
-		$retHtml = '<div class="getPostDispArea">';
+		$retHtml = '<div class="p-postdisp p-postdisp--home">';
 		// 取得した記事の個数分繰り返す
 		foreach($myposts as $post) :
 			// 投稿ごとの区切りのdiv
-			$retHtml .= '<div class="getPost">';
+			$retHtml .= '<div class="p-post p-post--home">';
 
 			// 記事オブジェクトの整形
 			setup_postdata($post);
 
 			// サムネイルの有無チェック
 			if ( has_post_thumbnail() ) {
-				// サムネイルがある場合↓
-				$retHtml .= '<div class="getPostImgArea">' . get_the_post_thumbnail($page->ID, 'thumbnail') . '</div>';
+				// サムネイルがある場合↓(サイズ指定を 'thumbnail' から 100×100 へ変更)
+				$retHtml .= '<div class="p-postimg p-postimg--home">' . get_the_post_thumbnail($page->ID, array(100,100)) . '</div>';
 			} else {
 				// サムネイルがない場合↓※何も表示しない
 				$retHtml .= '';
 			}
 
 			// 文章のみのエリアをdivで囲う
-			$retHtml .= '<div class="getPostStringArea">';
+			$retHtml .= '<div class="p-poststring p-poststring--home">';
 
 			// 投稿年月日を取得
 			$year = get_the_time('Y');	// 年
@@ -137,17 +137,17 @@ function getCatItems($atts, $content = null) {
 			//$retHtml .= '<span>この記事は' . $year . '年' . $month . '月' . $day . '日に投稿されました</span>';
 
 			// タイトル設定(リンクも設定する)
-			$retHtml.= '<h4 class="getPostTitle">';
+			$retHtml.= '<h4 class="p-posttitle p-posttitle--home">';
 			$retHtml.= '<a href="' . get_permalink() . '">' . the_title("","",false) . '</a>';
 			$retHtml.= '</h4>';
 		//日付
             $getDate = get_the_date();
-            $retHtml.= '<div class="getPostDate">' . $getDate . '</div>';
+            $retHtml.= '<div class="p-postdate p-postdate--home">' . $getDate . '</div>';
 			// 本文を抜粋して取得
 
         if($body == 'true'){
 			$getString = get_the_excerpt();
-			$retHtml.= '<div class="getPostContent">' . $getString . '</div>';
+			$retHtml.= '<div class="p-postcoment p-postcoment--home">' . $getString . '</div>';
             }
 			$retHtml.= '</div></div>';
 

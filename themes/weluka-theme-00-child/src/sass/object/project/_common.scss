@@ -42,27 +42,61 @@ filter:alpha(opacity=70);
     height: 80px;
     width: 250px;
 }
-
-
 .p-note--body {
     padding: 0 10px;
 }
-
 .p-note--body ul li {
     list-style: outside circle ;
     padding: 10px 0 10px 5px;
     text-indent: 0rem;
 }
-
-
 .p-txt-contact--middle{
     color: #f6692a;
     text-align: center;
 }
-
 .navbar-toggle{
     margin-top: 20px;
 }
+
+.p-bloglist--home{
+border: 4px solid #afafaf;
+  width:680px;
+  padding:10px;
+  margin-left: auto;
+  margin-right: auto;
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius:10px;
+
+}
+
+.p-bloglist--home h3{
+
+  box-sizing: content-box;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0 0 10px;
+  position: relative;
+}
+
+.p-post {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+}
+
+
+.p-poststring--home {
+  //width: 75%;
+  padding-left: 10px;
+}
+
+.weluka-sidebar h4.p-posttitle{
+  font-weight: normal;
+  font-size: 1em;
+}
+
 /* 768px以上 */
 
 @media (min-width: 768px) {
