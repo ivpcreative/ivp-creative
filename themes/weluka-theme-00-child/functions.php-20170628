@@ -98,6 +98,7 @@ function getCatItems($atts, $content = null) {
 	global $post;
 	$oldpost = $post;
 
+
     $cat_id = get_category_by_slug($cat);//スラッグをカテゴリIDに変換
     $cat_id = $cat_id->cat_ID;
 
@@ -111,8 +112,7 @@ function getCatItems($atts, $content = null) {
 		// 取得した記事の個数分繰り返す
 		foreach($myposts as $post) :
 			// 投稿ごとの区切りのdiv
-			//$retHtml .= '<div class="p-post p-post--home">';
-      $retHtml .= '<li class="p-post p-post--home">';
+			$retHtml .= '<div class="p-post p-post--home">';
 
       // 投稿年月日を取得
 			$year = get_the_time('Y');	// 年
@@ -127,7 +127,7 @@ function getCatItems($atts, $content = null) {
 			// サムネイルの有無チェック
 			if ( has_post_thumbnail() ) {
 				// サムネイルがある場合↓(サイズ指定を 'thumbnail' から 100×100 へ変更)
-				$retHtml .= '<div class="p-postimg p-postimg--home">' . get_the_post_thumbnail($page->ID, array(200,100)) . '</div>';
+				$retHtml .= '<div class="p-postimg p-postimg--home">' . get_the_post_thumbnail($page->ID, array(70,70)) . '</div>';
 			} else {
 				// サムネイルがない場合↓※何も表示しない
 				$retHtml .= '';
@@ -142,7 +142,7 @@ function getCatItems($atts, $content = null) {
 
 			// タイトル設定(リンクも設定する)
 			$retHtml.= '<h4 class="p-posttitle p-posttitle--home">';
-			$retHtml.= '<a href="' . get_permalink() . '">' . $getDate .'<br />'.  the_title("","",false) . '</a>';
+			$retHtml.= '<a href="' . get_permalink() . '">' . $getDate .'：'.  the_title("","",false) . '</a>';
 			$retHtml.= '</h4>';
 
 			// 本文を抜粋して取得
@@ -151,7 +151,7 @@ function getCatItems($atts, $content = null) {
 			$getString = get_the_excerpt();
 			$retHtml.= '<div class="p-postcoment p-postcoment--home">' . $getString . '</div>';
             }
-			$retHtml.= '</div></li>';
+			$retHtml.= '</div></div>';
 
 		endforeach;
 

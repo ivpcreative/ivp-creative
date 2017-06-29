@@ -213,6 +213,11 @@ Section
   margin: 0px;
   padding: 0px; }
 
+/*single*/
+.single-post .weluka-row {
+  padding-left: 10px;
+  padding-right: 10px; }
+
 /*
 colmun
 */
@@ -461,6 +466,9 @@ form.wpcf7-form p {
 .c-body {
   padding: 2rem; }
 
+.c-body p {
+  line-height: 2.0; }
+
 .c-body--center {
   /*
     padding:10px 120px 10px 120px;
@@ -503,6 +511,41 @@ form.wpcf7-form p {
   background-color: #303030;
   border-color: #3c3c3c; }
 
+/*横スクロールリスト*/
+.c-scrolllist--blog {
+  height: 190px;
+  /*メニューの縦幅*/
+  background-color: #444;
+  /*メニューの背景色*/ }
+
+.c-scrolllist .c-scrolllist-inner {
+  list-style-type: none;
+  width: 1000px;
+  /*メニューの横幅*/
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center; }
+
+.c-scrolllist li {
+  float: left;
+  height: 100%;
+  list-style: none; }
+
+.c-scrolllist a:hover {
+  background-color: #555;
+  /*マウスホバー時の背景色*/ }
+
+@media screen and (max-width: 1000px) {
+  /*メニューの横幅*/
+  .c-scrolllist {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; }
+  .c-scrolllist .c-scrolllist-inner {
+    margin: 0; } }
+
+/* end 横スクロールリスト*/
 /* 768px以上 */
 @media (min-width: 768px) {
   .c-ttl {
@@ -564,31 +607,35 @@ form.wpcf7-form p {
 .navbar-toggle {
   margin-top: 20px; }
 
-.p-bloglist--home {
-  border: 4px solid #afafaf;
-  width: 680px;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px; }
+.p-posttitle--home {
+  font-size: 1.8rem; }
 
-.p-bloglist--home h3 {
-  box-sizing: content-box;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 0 0 10px;
-  position: relative; }
-
+/*
 .p-post {
   display: flex;
   display: -webkit-box;
   display: -webkit-flex;
-  display: -ms-flexbox; }
+  display: -ms-flexbox;
+}
+*/
+.p-post {
+  width: 190px;
+  margin: 0px 5px 0px 5px; }
 
 .p-poststring--home {
-  padding-left: 10px; }
+  padding-left: 10px;
+  text-align: left; }
+
+.p-poststring--home a {
+  display: block;
+  height: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: #fff;
+  /*文字色*/
+  font-size: 70%;
+  font-weight: bold;
+  text-decoration: none; }
 
 .weluka-sidebar h4.p-posttitle {
   font-weight: normal;

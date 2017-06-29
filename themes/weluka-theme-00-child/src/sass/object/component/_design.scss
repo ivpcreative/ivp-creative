@@ -50,6 +50,11 @@
     padding: 2rem;
 }
 
+.c-body p{
+    line-height: 2.0;
+}
+
+
 .c-body--center {
     /*
     padding:10px 120px 10px 120px;
@@ -99,6 +104,41 @@
     background-color: #303030;
     border-color: #3c3c3c;
 }
+
+
+/*横スクロールリスト*/
+.c-scrolllist--blog{
+    height: 190px;/*メニューの縦幅*/
+    background-color: #444;/*メニューの背景色*/
+}
+.c-scrolllist .c-scrolllist-inner {
+    list-style-type: none;
+    width: 1000px;/*メニューの横幅*/
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+.c-scrolllist li {
+    float: left;
+    height: 100%;
+    list-style: none;
+}
+
+.c-scrolllist a:hover {
+    background-color: #555;/*マウスホバー時の背景色*/
+}
+@media screen and (max-width: 1000px) {/*メニューの横幅*/
+    .c-scrolllist {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    .c-scrolllist .c-scrolllist-inner {
+        margin: 0;
+    }
+}
+/* end 横スクロールリスト*/
 
 /* 768px以上 */
 @media (min-width: 768px) {

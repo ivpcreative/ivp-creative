@@ -58,38 +58,41 @@ filter:alpha(opacity=70);
     margin-top: 20px;
 }
 
-.p-bloglist--home{
-border: 4px solid #afafaf;
-  width:680px;
-  padding:10px;
-  margin-left: auto;
-  margin-right: auto;
--webkit-border-radius:10px;
--moz-border-radius:10px;
-border-radius:10px;
 
+.p-posttitle--home{
+  font-size: 1.8rem;
 }
 
-.p-bloglist--home h3{
-
-  box-sizing: content-box;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 0 0 10px;
-  position: relative;
-}
-
+/*
 .p-post {
   display: flex;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
 }
+*/
 
+
+.p-post {
+width:190px;
+margin:0px 5px 0px 5px;
+}
 
 .p-poststring--home {
   //width: 75%;
   padding-left: 10px;
+  text-align: left;;
+
+}
+.p-poststring--home a {
+    display: block;
+    height: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: #fff;/*文字色*/
+    font-size: 70%;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .weluka-sidebar h4.p-posttitle{
