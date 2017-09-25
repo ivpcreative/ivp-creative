@@ -35,8 +35,8 @@ add_action('admin_head-post.php', 'add_file_links',200 );
 /*フロントのみ有効にしたいCSS/JS 重に初期状態がhiddenであるCSSやJS*/
 add_action( 'wp_enqueue_scripts', 'add_file_links_nonbuilder',300 );
 /*ユーザーが自由に記載できるCSS、JS。初期はカラ。不要ならばコメントアウト*/
-add_action( 'wp_enqueue_scripts', 'add_file_links_free',400 );
-add_action('admin_head-post.php', 'add_file_links_free',400 );
+//add_action( 'wp_enqueue_scripts', 'add_file_links_free',400 );
+//add_action('admin_head-post.php', 'add_file_links_free',400 );
 
 
 /*リンクを絶対パスに変更*/
