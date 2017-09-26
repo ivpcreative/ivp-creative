@@ -11,7 +11,12 @@ jQuery(function() {
     //t-scroll.min.js
     Tu.tScroll({
       't-element': '.c-img',
-      't-animate': 'zoomOut'
+      't-animate': ' rollUp'
+    })
+
+    Tu.tScroll({
+      't-element': '.ls-top',
+      't-animate': ' rollUp'
     })
 
 
