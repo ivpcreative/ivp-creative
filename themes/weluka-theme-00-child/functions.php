@@ -4,24 +4,28 @@
  */
 //同ディレクトリのstyle.css を読み込む
 //https://github.com/wckansai2016/plugin-hands-on/blob/master/plugin_hands_on_4.md
-function add_file_links() {
 
-wp_enqueue_style( 'child-app-css', get_stylesheet_directory_uri() .'/dest/css/app.css' ); //CSS
+
+
+function add_file_links() {
+$cmp = 'src'; //dest:圧縮　/src:元
+wp_enqueue_style( 'child-app-css', get_stylesheet_directory_uri() .'/'. $cmp .'/css/app.css' ); //CSS
     //wp_enqueue_script( 'child-library-jquery-fixHeightSimple', get_stylesheet_directory_uri() . '/js/library/jquery-fixHeightSimple.js' ); // 行の高さをそろえるプラグイン
-    wp_enqueue_script( 'child-library-jquery-rwdImageMaps', get_stylesheet_directory_uri() . '/dest/js/library/jquery.rwdImageMaps.min.js' ); // イメージマップをレスポンシブ対応させる
-    wp_enqueue_script( 'child-common-js', get_stylesheet_directory_uri() . '/dest/js/common.js' ); //JS
+    wp_enqueue_script( 'child-library-jquery-rwdImageMaps', get_stylesheet_directory_uri() . '/'. $cmp .'/js/library/jquery.rwdImageMaps.min.js' ); // イメージマップをレスポンシブ対応させる
+    //wp_enqueue_script( 'child-library-jquery-scroll', get_stylesheet_directory_uri() . '/'. $cmp .'/js/library/t-scroll.js' ); // 動きを出す
+    wp_enqueue_script( 'child-common-js', get_stylesheet_directory_uri() . '/'. $cmp .'/js/common.js' ); //JS
+    wp_enqueue_script( 'child-front-js', get_stylesheet_directory_uri() . '/'. $cmp .'/js/front.js' ); //JS
 }
 
 /*初期状態がhidden等、管理画面やwelukaでは表示させないファイル*/
-function add_file_links_nonbuilder() {
-wp_enqueue_style( 'child-nonbuilder-css', get_stylesheet_directory_uri() .'/dest/css/non-builder.css' ); //CSS
-      wp_enqueue_script( 'child-nonbuilder-js', get_stylesheet_directory_uri() . '/dest/js/non-builder.js' ); //JS
+function add_file_links_front() {
+
 }
 
 /*ユーザーが自由に記載できるCSS、JS。初期状態はカラ。*/
 function add_file_links_free() {
-      wp_enqueue_style( 'child-free-css', get_stylesheet_directory_uri() .'/dest/css/free.css' ); //CSS
-      wp_enqueue_script( 'child-free-js', get_stylesheet_directory_uri() . '/dest/js/free.js' ); //JS
+      //wp_enqueue_style( 'child-free-css', get_stylesheet_directory_uri() .'/dest/css/free.css' ); //CSS
+      //wp_enqueue_script( 'child-free-js', get_stylesheet_directory_uri() . '/dest/js/free.js' ); //JS
 }
 
 
@@ -33,7 +37,7 @@ add_action( 'wp_enqueue_scripts', 'add_file_links',200 );
 //管理が目のpost.php でも読み込ませる
 add_action('admin_head-post.php', 'add_file_links',200 );
 /*フロントのみ有効にしたいCSS/JS 重に初期状態がhiddenであるCSSやJS*/
-add_action( 'wp_enqueue_scripts', 'add_file_links_nonbuilder',300 );
+add_action( 'wp_enqueue_scripts', 'add_file_links_front',300 );
 /*ユーザーが自由に記載できるCSS、JS。初期はカラ。不要ならばコメントアウト*/
 //add_action( 'wp_enqueue_scripts', 'add_file_links_free',400 );
 //add_action('admin_head-post.php', 'add_file_links_free',400 );
