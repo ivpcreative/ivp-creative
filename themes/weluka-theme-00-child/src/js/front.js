@@ -9,9 +9,9 @@ jQuery(function() {
   if (url.href.indexOf('weluka') == -1) { //front表示のみ(Welukaビルダーでは動作しない)
     //frontのみ
     //t-scroll.min.js
-    jQuery('.c-img').addClass('zoomOut');
     Tu.tScroll({
-      't-element': '.zoomOut'
+      't-element': '.c-img',
+      't-animate': 'zoomOut'
     })
 
 
