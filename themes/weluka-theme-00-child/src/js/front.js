@@ -8,7 +8,10 @@ jQuery(function() {
   var url = window.location;
   if (url.href.indexOf('weluka') == -1) { //front表示のみ(Welukaビルダーでは動作しない)
     //frontのみ
-
+    //t-scroll.min.js
+    Tu.tScroll({
+      't-element': '.zoomOut'
+    })
 
 
   } else {

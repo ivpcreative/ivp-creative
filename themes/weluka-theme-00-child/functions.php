@@ -10,11 +10,14 @@
 function add_file_links() {
 $cmp = 'src'; //dest:圧縮　/src:元
 wp_enqueue_style( 'child-app-css', get_stylesheet_directory_uri() .'/'. $cmp .'/css/app.css' ); //CSS
+wp_enqueue_style( 'child-t-scroll-css', get_stylesheet_directory_uri() .'/'. $cmp .'/css/t-scroll.min.css' ); //CSS
     //wp_enqueue_script( 'child-library-jquery-fixHeightSimple', get_stylesheet_directory_uri() . '/js/library/jquery-fixHeightSimple.js' ); // 行の高さをそろえるプラグイン
     wp_enqueue_script( 'child-library-jquery-rwdImageMaps', get_stylesheet_directory_uri() . '/'. $cmp .'/js/library/jquery.rwdImageMaps.min.js' ); // イメージマップをレスポンシブ対応させる
+      wp_enqueue_script( 'child-library-jquery-t-scrool', get_stylesheet_directory_uri() . '/'. $cmp .'/js/library/t-scroll.min.js' ); // イメージマップをレスポンシブ対応させる
     //wp_enqueue_script( 'child-library-jquery-scroll', get_stylesheet_directory_uri() . '/'. $cmp .'/js/library/t-scroll.js' ); // 動きを出す
     wp_enqueue_script( 'child-common-js', get_stylesheet_directory_uri() . '/'. $cmp .'/js/common.js' ); //JS
     wp_enqueue_script( 'child-front-js', get_stylesheet_directory_uri() . '/'. $cmp .'/js/front.js' ); //JS
+
 }
 
 /*初期状態がhidden等、管理画面やwelukaでは表示させないファイル*/
