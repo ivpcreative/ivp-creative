@@ -11,7 +11,7 @@ jQuery(function() {
   if (url.href.indexOf('weluka') == -1) { //front表示のみ(Welukaビルダーでは動作しない)
     //frontのみ
     //t-scroll.min.js
-    jQuery('.ls-top').addClass('t-default t-animated');
+    jQuery('.ls-top').addClass('t-animated');
 
     Tu.tScroll({
       't-element': '.ls-top',
