@@ -27,7 +27,7 @@ wp_enqueue_style( 'child-t-scroll-css', get_stylesheet_directory_uri() .'/'. $cm
 function add_file_links_front() {
   $cmp =  getOptionPass();
   wp_enqueue_script( 'child-front-js', get_stylesheet_directory_uri() . '/'. $cmp .'/js/front.js' ); //JS
-    wp_enqueue_script( 'child-front-js', get_stylesheet_directory_uri() . '/'. $cmp .'/js/front.css' ); //JS
+    wp_enqueue_style( 'child-front-css', get_stylesheet_directory_uri() . '/'. $cmp .'/css/front.css' ); //JS
 }
 
 /*ユーザーが自由に記載できるCSS、JS。初期状態はカラ。*/

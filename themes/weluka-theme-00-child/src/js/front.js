@@ -7,28 +7,26 @@ jQuery(function() {
 
   var url = window.location;
 
-
-  if (url.href.indexOf('weluka') == -1) { //front表示のみ(Welukaビルダーでは動作しない)
     //frontのみ
     //t-scroll.min.js
-    jQuery('.ls-top').addClass('t-animated');
+    jQuery('.ls-top').css('visibility','visible'); //表示
+    jQuery('.ls-top').addClass('t-animated'); //開いた瞬間にアニメーションさせる。
 
+/*
+    jQuery('.ls-top').attr({
+  'data-t-show': '1'
+    });
+*/
     Tu.tScroll({
       't-element': '.ls-top',
-      't-animate': ' rollUp'
+      't-animate': 'rollDown',
+      't-delay': 2
     })
 
     Tu.tScroll({
       't-element': '.c-img',
       't-animate': ' rollUp'
     })
-
-
-
-  } else {
-    //ビルダーのみ
-
-  }
 
 });
 /*end.load時にkick*/
