@@ -12,6 +12,13 @@ jQuery(function() {
     jQuery('.ls-top').css('visibility','visible'); //表示
     jQuery('.ls-top').addClass('t-animated'); //開いた瞬間にアニメーションさせる。
 
+
+    jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn').addClass('fadeFirst fadeDown t-animated');
+    jQuery(' .p-home2-top--tile02, .lc-home2-webvalue--tile02').addClass('fadeSecond fadeDown t-animated');
+    jQuery('.lc-home2-webvalue--tile01').addClass('fadeThird fadeDown t-animated');
+    jQuery('.p-home2-top--img02').addClass('fadeFourth fadeDown t-animated');
+    jQuery('.lc-home2-top--tile01').addClass('fadeFifth fadeDown t-animated');
+
 /*
     jQuery('.ls-top').attr({
   'data-t-show': '1'
@@ -26,6 +33,41 @@ jQuery(function() {
     Tu.tScroll({
       't-element': '.c-img',
       't-animate': ' rollUp'
+    })
+
+    Tu.tScroll({
+      't-element': '.fadeFirst',
+      't-animate': 'fadeDown',
+      't-duration':2,
+      't-delay': 0.4
+    })
+
+    Tu.tScroll({
+      't-element': '.fadeSecond',
+      't-animate': 'fadeDown',
+      't-duration':2,
+      't-delay': 0.7
+    })
+
+    Tu.tScroll({
+      't-element': '.fadeThird',
+      't-animate': 'fadeDown',
+      't-duration':2,
+      't-delay': 0.9
+    })
+
+     Tu.tScroll({
+      't-element': '.fadeFourth',
+      't-animate': 'fadeDown',
+      't-duration':2,
+      't-delay': 1
+    })
+
+    Tu.tScroll({
+      't-element': '.fadeFifth',
+      't-animate': 'fadeDown',
+      't-duration':2,
+      't-delay': 1
     })
 
 });
