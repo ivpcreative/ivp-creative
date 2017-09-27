@@ -6,10 +6,15 @@ jQueryのアニメーションで初期状態に非表示にする場合など�
 
 /* 独自cssを追加する場合はこのファイルに記述 */
 
-.ls-top{
-visibility:hidden
-}
 
 @media (min-width: 768px) {
+  .ls-top{
+  visibility:hidden
+  }
+
+
+.ls-home2-pc--top{
+  visibility:hidden
+}
 
   }

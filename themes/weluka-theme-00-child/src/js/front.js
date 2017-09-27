@@ -13,8 +13,10 @@ jQuery(function() {
     jQuery('.ls-top').addClass('t-animated'); //開いた瞬間にアニメーションさせる。
 
 
+    //home2
+    jQuery('.ls-home2-pc--top').css('visibility','visible'); //表示
     jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn').addClass('fadeFirst fadeDown t-animated');
-    jQuery(' .p-home2-top--tile02, .lc-home2-webvalue--tile02').addClass('fadeSecond fadeDown t-animated');
+    jQuery('.p-home2-top--tile02, .lc-home2-webvalue--tile02').addClass('fadeSecond fadeDown t-animated');
     jQuery('.lc-home2-webvalue--tile01').addClass('fadeThird fadeDown t-animated');
     jQuery('.p-home2-top--img02').addClass('fadeFourth fadeDown t-animated');
     jQuery('.lc-home2-top--tile01').addClass('fadeFifth fadeDown t-animated');
@@ -24,10 +26,11 @@ jQuery(function() {
   'data-t-show': '1'
     });
 */
+//home
     Tu.tScroll({
       't-element': '.ls-top',
       't-animate': 'rollDown',
-      't-delay': 2
+      't-delay': 1
     })
 
     Tu.tScroll({
@@ -35,6 +38,7 @@ jQuery(function() {
       't-animate': ' rollUp'
     })
 
+//home2
     Tu.tScroll({
       't-element': '.fadeFirst',
       't-animate': 'fadeDown',
