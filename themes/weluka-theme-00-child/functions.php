@@ -6,9 +6,13 @@
 //https://github.com/wckansai2016/plugin-hands-on/blob/master/plugin_hands_on_4.md
 
 
+function getOptionPass(){
+  $cmp = 'src'; //dest:圧縮　/src:元
+  return $cmp;
+}
 
 function add_file_links() {
-$cmp = 'src'; //dest:圧縮　/src:元
+      $cmp =  getOptionPass();
 wp_enqueue_style( 'child-app-css', get_stylesheet_directory_uri() .'/'. $cmp .'/css/app.css' ); //CSS
 wp_enqueue_style( 'child-t-scroll-css', get_stylesheet_directory_uri() .'/'. $cmp .'/css/t-scroll.min.css' ); //CSS
     //wp_enqueue_script( 'child-library-jquery-fixHeightSimple', get_stylesheet_directory_uri() . '/js/library/jquery-fixHeightSimple.js' ); // 行の高さをそろえるプラグイン
@@ -16,13 +20,14 @@ wp_enqueue_style( 'child-t-scroll-css', get_stylesheet_directory_uri() .'/'. $cm
       wp_enqueue_script( 'child-library-jquery-t-scrool', get_stylesheet_directory_uri() . '/'. $cmp .'/js/library/t-scroll.min.js' ); // イメージマップをレスポンシブ対応させる
     //wp_enqueue_script( 'child-library-jquery-scroll', get_stylesheet_directory_uri() . '/'. $cmp .'/js/library/t-scroll.js' ); // 動きを出す
     wp_enqueue_script( 'child-common-js', get_stylesheet_directory_uri() . '/'. $cmp .'/js/common.js' ); //JS
-    wp_enqueue_script( 'child-front-js', get_stylesheet_directory_uri() . '/'. $cmp .'/js/front.js' ); //JS
 
 }
 
 /*初期状態がhidden等、管理画面やwelukaでは表示させないファイル*/
 function add_file_links_front() {
-
+  $cmp =  getOptionPass();
+  wp_enqueue_script( 'child-front-js', get_stylesheet_directory_uri() . '/'. $cmp .'/js/front.js' ); //JS
+    wp_enqueue_script( 'child-front-js', get_stylesheet_directory_uri() . '/'. $cmp .'/js/front.css' ); //JS
 }
 
 /*ユーザーが自由に記載できるCSS、JS。初期状態はカラ。*/
@@ -39,8 +44,12 @@ function add_file_links_free() {
 add_action( 'wp_enqueue_scripts', 'add_file_links',200 );
 //管理が目のpost.php でも読み込ませる
 add_action('admin_head-post.php', 'add_file_links',200 );
-/*フロントのみ有効にしたいCSS/JS 重に初期状態がhiddenであるCSSやJS*/
+
+/*フロントのみ有効にしたいCSS/JS 重に初期状態がhiddenであるCSSやJS welukaサイトビルダーも非表示にしたい*/
+$uri = $_SERVER["REQUEST_URI"];
+if(!strstr($uri,'weluka_')){
 add_action( 'wp_enqueue_scripts', 'add_file_links_front',300 );
+}
 /*ユーザーが自由に記載できるCSS、JS。初期はカラ。不要ならばコメントアウト*/
 //add_action( 'wp_enqueue_scripts', 'add_file_links_free',400 );
 //add_action('admin_head-post.php', 'add_file_links_free',400 );
