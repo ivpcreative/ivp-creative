@@ -1,23 +1,28 @@
 /* front.js；管理画面やWelukaページビルダーで動作させたくない。初期状態がhiddenなど。
 load時にKICK*/
+
 jQuery(function() {
 
   frontJsObj = new frontJs();
 
-
   var url = window.location;
+
+
   if (url.href.indexOf('weluka') == -1) { //front表示のみ(Welukaビルダーでは動作しない)
     //frontのみ
     //t-scroll.min.js
-    Tu.tScroll({
-      't-element': '.c-img',
-      't-animate': ' rollUp'
-    })
+    jQuery('.ls-top').addClass('t-default t-animated');
 
     Tu.tScroll({
       't-element': '.ls-top',
       't-animate': ' rollUp'
     })
+
+    Tu.tScroll({
+      't-element': '.c-img',
+      't-animate': ' rollUp'
+    })
+
 
 
   } else {
