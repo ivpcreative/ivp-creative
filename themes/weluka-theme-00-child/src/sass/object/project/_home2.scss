@@ -1,0 +1,73 @@
+/*project_home2
+*/
+
+.lr-home2-web--text {
+  position: absolute;
+  top: 0;
+  font-weight: bold;
+}
+
+.ls-home2-pc--web div:hover p {
+  background: -webkit-linear-gradient(transparent 50%, #f5ff00 50%);
+  background: linear-gradient(transparent 50%, #f5ff00 50%);
+  width: fit-content !important;
+}
+
+.lr-home2-web--text {
+  span {
+    font-size: 3.5rem;
+    vertical-align: middle;
+  }
+  > div > div {
+    &:nth-child(1) {
+      font-size: 2.3rem;
+    }
+    &:nth-child(2) {
+      font-size: 2.8rem;
+    }
+    &:nth-child(3) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .lr-home2-web--text {
+    span {
+      font-size: 3rem;
+    }
+    > div > div {
+      &:nth-child(1) {
+        font-size: 1.8rem;
+      }
+      &:nth-child(2) {
+        font-size: 2.3rem;
+      }
+      &:nth-child(3) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .lr-home2-web--text {
+    p {
+      margin-bottom: 0;
+    }
+    span {
+      font-size: 2rem;
+    }
+    > div > div {
+      &:nth-child(1) {
+        font-size: 1.1rem;
+      }
+      &:nth-child(2) {
+        font-size: 1.2rem;
+      }
+      &:nth-child(3) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
