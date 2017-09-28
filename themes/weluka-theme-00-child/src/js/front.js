@@ -74,6 +74,12 @@ jQuery(function() {
       't-delay': 1
     })
 
+    Tu.tScroll({
+      't-element': '.lc-home2-service',
+      't-animate': 'zoomOut',
+      't-duration':0.7
+    })
+
 });
 /*end.load時にkick*/
 
