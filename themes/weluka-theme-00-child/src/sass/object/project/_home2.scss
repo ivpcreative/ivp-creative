@@ -1,9 +1,15 @@
 /*project_home2
 */
+.ls-home2-blog .lr-main {
+  margin-bottom: 0;
+}
 
-.lr-home2-web--text {
+.lc-home2-img-ttl {
   position: absolute;
-  top: 0;
+  top: 10%;
+}
+
+.lc-home2-blgo-ttl {
   font-weight: bold;
 }
 
@@ -13,52 +19,68 @@
   width: fit-content !important;
 }
 
-.lr-home2-web--text {
-  span {
-    font-size: 3.5rem;
+.lc-home2-blgo-ttl > div {
+  &:nth-child(1) {
+    font-size: 2.3rem;
+    p:after {
+      display: inline-block;
+      width: 2.5rem;
+      height: 3.5rem;
+      margin-left: 10px;
+      content: "";
+      vertical-align: middle;
+    }
+  }
+  &:nth-child(3) p:after {
+    display: inline-block;
+    width: 2.5rem;
+    height: 3.5rem;
+    margin-left: 10px;
+    content: "";
     vertical-align: middle;
   }
-  > div > div {
-    &:nth-child(1) {
-      font-size: 2.3rem;
-    }
-    &:nth-child(2) {
-      font-size: 2.8rem;
-    }
-    &:nth-child(3) {
-      font-size: 1.8rem;
+  &:nth-child(1) p:after {
+    background: url(/wp-content/uploads/2017/09/ttl-line.png) no-repeat;
+    background-size: contain;
+  }
+  &:nth-child(2) {
+    font-size: 2.5rem;
+  }
+  &:nth-child(3) {
+    font-size: 1.8rem;
+    p:after {
+      background: url(/wp-content/uploads/2017/09/detail-arrow.png) no-repeat;
+      background-size: contain;
     }
   }
 }
 
 @media (max-width: 992px) {
-  .lr-home2-web--text {
-    span {
-      font-size: 3rem;
+  .lc-home2-blgo-ttl > div {
+    &:nth-child(1) {
+      font-size: 1.8rem;
     }
-    > div > div {
-      &:nth-child(1) {
-        font-size: 1.8rem;
-      }
-      &:nth-child(2) {
-        font-size: 2.3rem;
-      }
-      &:nth-child(3) {
-        font-size: 1.5rem;
-      }
+    &:nth-child(2) {
+      font-size: 2.2rem;
+    }
+    &:nth-child(3) {
+      font-size: 1.5rem;
+    }
+    &:nth-child(1) p:after, &:nth-child(3) p:after {
+      height: 2.5rem;
     }
   }
 }
 
 @media (max-width: 768px) {
-  .lr-home2-web--text {
+  .lc-home2-img-ttl {
+    top: 0;
+  }
+  .lc-home2-blgo-ttl {
     p {
       margin-bottom: 0;
     }
-    span {
-      font-size: 2rem;
-    }
-    > div > div {
+    > div {
       &:nth-child(1) {
         font-size: 1.1rem;
       }
@@ -67,6 +89,9 @@
       }
       &:nth-child(3) {
         font-size: 1rem;
+      }
+      &:nth-child(1) p:after, &:nth-child(3) p:after {
+        height: 2rem;
       }
     }
   }
