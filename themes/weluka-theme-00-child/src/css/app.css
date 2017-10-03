@@ -581,6 +581,17 @@ form.wpcf7-form p {
 
 /*project_common
 */
+.p-ttl-center {
+  text-align: center; }
+
+.lc-text-center {
+  float: none;
+  margin: auto; }
+
+.p-web-ttl {
+  font-weight: bold;
+  text-align: center; }
+
 .p-top--note {
   margin: 0px;
   text-align: center; }
@@ -766,8 +777,7 @@ form.wpcf7-form p {
   .lc-home2-blgo-ttl > div span {
     font-size: 1.2rem; }
   .lc-home2-blgo-ttl > div:nth-child(1) {
-    font-size: 1.5rem;
-    font-weight: normal; }
+    font-size: 1.6rem; }
   .lc-home2-blgo-ttl > div:nth-child(2) {
     font-size: 1.8rem; }
   .lc-home2-blgo-ttl > div:nth-child(3) p:after {
