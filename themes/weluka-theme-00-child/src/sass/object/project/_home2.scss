@@ -1,5 +1,9 @@
 /*project_home2
 */
+.lr-blog-ttl-center{
+  margin: auto;
+}
+
 .ls-home2-blog .lr-main {
   margin-bottom: 0;
 }
@@ -13,7 +17,7 @@
   font-weight: bold;
 }
 
-.ls-home2-pc--web div:hover p {
+.ls-home2-pc--web div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p {
   background: -webkit-linear-gradient(transparent 50%, #f5ff00 50%);
   background: linear-gradient(transparent 50%, #f5ff00 50%);
   width: fit-content !important;
@@ -39,6 +43,21 @@
     content: "";
     vertical-align: middle;
   }
+}
+
+.p-home2-blgo-dtl p:after {
+  display: inline-block;
+  width: 2.5rem;
+  height: 3.5rem;
+  margin-left: 10px;
+  content: "";
+  vertical-align: middle;
+}
+
+.lc-home2-blgo-ttl > div {
+  span{
+    font-size: 1.8rem;
+  }
   &:nth-child(1) p:after {
     background: url(/wp-content/uploads/2017/09/ttl-line.png) no-repeat;
     background-size: contain;
@@ -53,6 +72,11 @@
       background-size: contain;
     }
   }
+}
+
+.p-home2-blgo-dtl p:after {
+  background: url(/wp-content/uploads/2017/09/detail-arrow.png) no-repeat;
+  background-size: contain;
 }
 
 @media (max-width: 992px) {
@@ -81,18 +105,54 @@
       margin-bottom: 0;
     }
     > div {
-      &:nth-child(1) {
-        font-size: 1.1rem;
-      }
-      &:nth-child(2) {
+      span{
         font-size: 1.2rem;
       }
-      &:nth-child(3) {
-        font-size: 1rem;
+      &:nth-child(1) {
+        font-size: 1.5rem;
+        font-weight: normal;
       }
-      &:nth-child(1) p:after, &:nth-child(3) p:after {
+      &:nth-child(2) {
+        font-size: 1.8rem;
+      }
+      &:nth-child(3) {
+        p:after {
+          background: none;
+        }
+      }
+      &:nth-child(1) p:after {
         height: 2rem;
       }
     }
+  }
+  .p-home2-blgo-dtl p:after {
+    height: 2rem;
+  }
+  .ls-home2-pc--web div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p {
+    background: none;
+  }
+  .lc-top-sp-bnr {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .lc-top-sp-bnr1 {
+    padding-right: 0;
+    div {
+      &:nth-child(1) {
+        padding: 8% 25% 9% 5%;
+      }
+      &:nth-child(3) {
+        margin-top: 10px;
+      }
+    }
+  }
+  .lc-top-sp-bnr2 div:nth-child(2) {
+    float: right;
+    padding: 0 22px;
+  }
+  .lc-home2-service {
+    width: 33.33%;
+    display: inline-block;
   }
 }

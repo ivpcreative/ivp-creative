@@ -7,8 +7,12 @@ jQuery(function() {
 
   var url = window.location;
 
-    //frontのみ
-    //t-scroll.min.js
+  jQuery(window).on('load resize', function () {
+    var winSize = screen.width;
+    if(winSize <= 768){
+
+    }
+    else{
     jQuery('.ls-top').css('visibility','visible'); //表示
     jQuery('.ls-top').addClass('t-animated'); //開いた瞬間にアニメーションさせる。
 
@@ -21,11 +25,6 @@ jQuery(function() {
     jQuery('.p-home2-top--img02').addClass('fadeFourth fadeDown t-animated');
     jQuery('.lc-home2-top--tile01').addClass('fadeFifth fadeDown t-animated');
 
-/*
-    jQuery('.ls-top').attr({
-  'data-t-show': '1'
-    });
-*/
 //home
     Tu.tScroll({
       't-element': '.ls-top',
@@ -79,8 +78,12 @@ jQuery(function() {
       't-animate': 'zoomOut',
       't-duration':0.7
     })
-
+  }
 });
+});
+    //frontのみ
+    //t-scroll.min.js
+    
 /*end.load時にkick*/
 
 /* subJsオブジェクト生成コンストラクタ */
