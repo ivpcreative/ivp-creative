@@ -845,6 +845,12 @@ form.wpcf7-form p {
   .p-ttl-contact {
     font-size: 3.5rem; } }
 
+/* 768px以下 */
+@media (max-width: 768px) {
+  .ls-page-explain--wp p {
+    width: 90%;
+    margin: auto; } }
+
 /* utility_text
 画像配置等
 */
