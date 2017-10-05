@@ -695,6 +695,14 @@ form.wpcf7-form p {
 */
 /*project_home2
 */
+body {
+  color: #000; }
+
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold; }
+
 .lr-blog-ttl-center {
   margin: auto; }
 
@@ -706,24 +714,24 @@ form.wpcf7-form p {
   top: 10%; }
 
 .lc-home2-blgo-ttl {
-  font-weight: bold; }
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  color: #000; }
+  .lc-home2-blgo-ttl p {
+    font-weight: bold; }
+  .lc-home2-blgo-ttl a {
+    text-decoration: none;
+    color: #000; }
 
-.ls-home2-pc--web div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p {
+.ls-home2-pc--web div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p,
+.ls-home2-pc--web div:hover h2, .ls-home2-pc--wp div:hover h2, .ls-home2-pc--seo div:hover h2 {
   background: -webkit-linear-gradient(transparent 50%, #f5ff00 50%);
   background: linear-gradient(transparent 50%, #f5ff00 50%);
   width: fit-content !important; }
 
-.lc-home2-blgo-ttl > div:nth-child(1) {
+.lc-home2-blgo-ttl h2 {
   font-size: 2.3rem; }
-  .lc-home2-blgo-ttl > div:nth-child(1) p:after {
-    display: inline-block;
-    width: 2.5rem;
-    height: 3.5rem;
-    margin-left: 10px;
-    content: "";
-    vertical-align: middle; }
 
-.lc-home2-blgo-ttl > div:nth-child(3) p:after {
+h3:after {
   display: inline-block;
   width: 2.5rem;
   height: 3.5rem;
@@ -731,7 +739,7 @@ form.wpcf7-form p {
   content: "";
   vertical-align: middle; }
 
-.p-home2-blgo-dtl p:after {
+.lc-home2-blgo-ttl h2:after, .lc-home2-blgo-ttl a:after {
   display: inline-block;
   width: 2.5rem;
   height: 3.5rem;
@@ -739,52 +747,52 @@ form.wpcf7-form p {
   content: "";
   vertical-align: middle; }
 
-.lc-home2-blgo-ttl > div span {
-  font-size: 1.8rem; }
+.lc-home2-blgo-ttl span {
+  font-size: 1.8rem;
+  font-weight: normal; }
 
-.lc-home2-blgo-ttl > div:nth-child(1) p:after {
-  background: url(/wp-content/uploads/2017/09/ttl-line.png) no-repeat;
+.lc-home2-blgo-ttl h2:after {
+  background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
   background-size: contain; }
 
-.lc-home2-blgo-ttl > div:nth-child(2) {
-  font-size: 2.5rem; }
+h3:after {
+  background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
+  background-size: contain; }
 
-.lc-home2-blgo-ttl > div:nth-child(3) {
-  font-size: 1.8rem; }
-  .lc-home2-blgo-ttl > div:nth-child(3) p:after {
-    background: url(/wp-content/uploads/2017/09/detail-arrow.png) no-repeat;
+.lc-home2-blgo-ttl p {
+  font-size: 2.8rem; }
+
+.lc-home2-blgo-ttl a {
+  font-size: 1.5rem; }
+  .lc-home2-blgo-ttl a:after {
+    background: url(/wp-content/uploads/img/detail-arrow.png) no-repeat;
     background-size: contain; }
 
-.p-home2-blgo-dtl p:after {
-  background: url(/wp-content/uploads/2017/09/detail-arrow.png) no-repeat;
-  background-size: contain; }
-
 @media (max-width: 992px) {
-  .lc-home2-blgo-ttl > div:nth-child(1) {
+  .lc-home2-blgo-ttl h2 {
     font-size: 1.8rem; }
-  .lc-home2-blgo-ttl > div:nth-child(2) {
+  .lc-home2-blgo-ttl p {
     font-size: 2.2rem; }
-  .lc-home2-blgo-ttl > div:nth-child(3) {
+  .lc-home2-blgo-ttl a {
     font-size: 1.5rem; }
-  .lc-home2-blgo-ttl > div:nth-child(1) p:after, .lc-home2-blgo-ttl > div:nth-child(3) p:after {
+  h3:after {
+    height: 2.5rem; }
+  .lc-home2-blgo-ttl h2:after, .lc-home2-blgo-ttl a:after {
     height: 2.5rem; } }
 
 @media (max-width: 768px) {
+  h3 {
+    font-size: 1.8rem; }
   .lc-home2-img-ttl {
     top: 0; }
   .lc-home2-blgo-ttl p {
-    margin-bottom: 0; }
-  .lc-home2-blgo-ttl > div span {
-    font-size: 1.2rem; }
-  .lc-home2-blgo-ttl > div:nth-child(1) {
-    font-size: 1.6rem; }
-  .lc-home2-blgo-ttl > div:nth-child(2) {
+    margin-bottom: 1rem;
+    font-size: 2rem; }
+  .lc-home2-blgo-ttl span {
+    font-size: 1.4rem; }
+  .lc-home2-blgo-ttl h2 {
     font-size: 1.8rem; }
-  .lc-home2-blgo-ttl > div:nth-child(3) p:after {
-    background: none; }
-  .lc-home2-blgo-ttl > div:nth-child(1) p:after {
-    height: 2rem; }
-  .p-home2-blgo-dtl p:after {
+  h3:after, .lc-home2-blgo-ttl h2:after, .p-home2-blgo-dtl a:after {
     height: 2rem; }
   .ls-home2-pc--web div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p {
     background: none; }
