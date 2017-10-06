@@ -7,6 +7,13 @@ jQuery(function() {
 
   var url = window.location;
 
+  jQuery(document).on('ready', function () {
+    jQuery('.ls-home2-pc--web').wrap( "<a class='link-home2-blog' href='/web'></a>" );
+    jQuery('.ls-home2-pc--wp').wrap( "<a class='link-home2-blog' href='/wp'></a>" );
+    jQuery('.ls-home2-pc--seo').wrap( "<a class='link-home2-blog' href='/seo'></a>" );
+
+  });
+
   jQuery(window).on('load resize', function () {
     var winSize = screen.width;
     if(winSize <= 768){
