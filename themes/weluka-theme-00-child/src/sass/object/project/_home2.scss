@@ -38,8 +38,12 @@ h3 {
 .ls-home2-pc--web div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p,
 .ls-home2-pc--web div:hover h2, .ls-home2-pc--wp div:hover h2, .ls-home2-pc--seo div:hover h2 {
   background: -webkit-linear-gradient(transparent 50%, #f5ff00 50%);
+  background: -moz-linear-gradient(transparent 50%, #f5ff00 50%);
+  background: -o-linear-gradient(transparent 50%, #f5ff00 50%);
   background: linear-gradient(transparent 50%, #f5ff00 50%);
   width: fit-content !important;
+  width: -moz-fit-content  !important;
+  width: -webkit-fit-content !important;
 }
 
 .lc-home2-blgo-ttl h2 {
