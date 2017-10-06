@@ -41,6 +41,14 @@ Section
     padding: 1rem;
 }
 
+.ls-home2-pc{
+  margin-bottom: 20px;
+}
+
+/*home2*/
+
+
+
 /*Row*/
 
 .lr-main--bg02 {
@@ -81,6 +89,7 @@ colmun
     color: #fff;
 }
 
+
 /* 768px以上(スマホ以外表示)*/
 
 @media (min-width: 768px) {
@@ -117,4 +126,15 @@ colmun
         max-width: 100%;
         width: 1170px;
     }
+    .ls-home2-pc--service{
+      margin:0 200px 0 200px;
+    }
 }
+
+    /*1200px以上*/
+    @media (min-width: 1200px) {
+
+        .ls-home2-pc--service{
+          margin:0 400px 0 400px;
+        }
+    }
