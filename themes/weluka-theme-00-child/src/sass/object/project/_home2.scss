@@ -1,7 +1,19 @@
 /*project_home2
 */
-body{
+
+body {
   color: #000;
+}
+
+.p-home2-blog-dtl {
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+  display: table;
+  font-weight: bold;
+  p {
+    font-size: 1.7rem;
+  }
 }
 
 .lr-blog-ttl-center {
@@ -15,62 +27,63 @@ body{
 .lc-home2-img-ttl {
   position: absolute;
   top: 10%;
+  z-index: 999;
 }
 
-.lc-home2-blgo-ttl {
+a.link-home2-blog {
+  text-decoration: none;
+  color: #000;
+}
+
+.lc-home2-blog-ttl, .p-home2-blog-dtl {
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   color: #000;
-  p {
-    font-weight: bold;
-    font-size: 2.8rem;
-    display: table;   
-  }
-  a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1.5rem;
-    &:after {
-      background: url(/wp-content/uploads/img/detail-arrow.png) no-repeat;
-      background-size: contain;
-    }
-  }
+}
+
+.lc-home2-blog-ttl p {
+  font-weight: bold;
+  font-size: 2.8rem;
+  display: table;
+}
+
+.p-home2-blog-dtl p:after {
+  background: url(/wp-content/uploads/img/detail-arrow.png) no-repeat;
+  background-size: contain;
+}
+
+.lc-home2-blog-ttl {
   h2 {
     font-size: 2.3rem;
     display: table;
   }
   span {
     font-size: 1.8rem;
-    font-weight:normal;
+    font-weight: normal;
   }
 }
 
-.ls-home2-pc--web div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p,
-.ls-home2-pc--web div:hover h2, .ls-home2-pc--wp div:hover h2, .ls-home2-pc--seo div:hover h2 {
-  background: -webkit-linear-gradient(transparent 50%, #f5ff00 50%);
-  background: -moz-linear-gradient(transparent 50%, #f5ff00 50%);
-  background: -o-linear-gradient(transparent 50%, #f5ff00 50%);
-  background: linear-gradient(transparent 50%, #f5ff00 50%);
+.ls-home2-pc--web div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p, .ls-home2-pc--web div:hover span {
+  background: -webkit-linear-gradient(transparent 50%, #f5ff00 40%);
+  background: -moz-linear-gradient(transparent 50%, #f5ff00 40%);
+  background: -o-linear-gradient(transparent 50%, #f5ff00 40%);
+  background: linear-gradient(transparent 50%, #f5ff00 40%);
 }
 
-.lc-home2-blgo-ttl {
-  h2:after, a:after {
-    display: inline-block;
-    width: 2.5rem;
-    height: 3.5rem;
-    margin-left: 10px;
-    content: "";
-    vertical-align: middle;
-  }
+.lc-home2-blog-ttl h2:after, .p-home2-blog-dtl p:after {
+  display: inline-block;
+  width: 2.5rem;
+  height: 3.5rem;
+  margin-left: 10px;
+  content: "";
+  vertical-align: middle;
 }
 
-.lc-home2-blgo-ttl {
-  h2:after {
-    background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
-    background-size: contain;
-  }
+.lc-home2-blog-ttl h2:after {
+  background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
+  background-size: contain;
 }
 
-h3 {
+.p-home2-blog-ttl h3 {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
@@ -86,37 +99,40 @@ h3 {
   }
 }
 
-
 @media (max-width: 992px) {
-  .lc-home2-blgo-ttl {
+  .lc-home2-blog-ttl {
     h2 {
       font-size: 1.8rem;
     }
-    p{
+    p {
       font-size: 2.2rem;
     }
-    a{
+    a {
       font-size: 1.5rem;
     }
   }
-  h3:after {
+  .p-home2-blog-ttl h3:after {
     height: 2.5rem;
   }
-  .lc-home2-blgo-ttl {
+  .lc-home2-blog-ttl {
     h2:after, a:after {
       height: 2.5rem;
     }
   }
+  .lc-home2-service {
+    width: 33.33%;
+    display: inline-block;
+  }
 }
 
 @media (max-width: 768px) {
-  h3{
+  .p-home2-blog-ttl h3 {
     font-size: 1.8rem;
   }
-  .lc-home2-img-ttl {
-    top: 0;
+  .lc-home2-img-ttl, .p-home2-blog-dtl {
+    position: static;
   }
-  .lc-home2-blgo-ttl {
+  .lc-home2-blog-ttl {
     p {
       margin-bottom: 1rem;
       font-size: 2rem;
@@ -128,11 +144,10 @@ h3 {
       font-size: 1.8rem;
     }
   }
-  h3:after, .lc-home2-blgo-ttl h2:after, .p-home2-blgo-dtl a:after {
+  .p-home2-blog-ttl h3:after, .lc-home2-blog-ttl h2:after, .p-home2-blog-dtl a:after {
     height: 2rem;
   }
-  .ls-home2-pc div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p,
-  .ls-home2-pc div:hover h2, .ls-home2-pc--wp div:hover h2, .ls-home2-pc--seo div:hover h2 {
+  .ls-home2-pc div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p, .ls-home2-pc div:hover span, .ls-home2-pc--wp div:hover span, .ls-home2-pc--seo div:hover span {
     background: none;
   }
   .lc-top-sp-bnr {
@@ -154,9 +169,5 @@ h3 {
   .lc-top-sp-bnr2 div:nth-child(2) {
     float: right;
     padding: 0 22px;
-  }
-  .lc-home2-service {
-    width: 33.33%;
-    display: inline-block;
   }
 }
