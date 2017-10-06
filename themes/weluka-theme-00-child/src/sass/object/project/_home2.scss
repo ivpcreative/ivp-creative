@@ -40,11 +40,6 @@ a.link-home2-blog {
   color: #000;
 }
 
-.lc-home2-blog-ttl p {
-  font-weight: bold;
-  font-size: 2.8rem;
-  display: table;
-}
 
 .p-home2-blog-dtl p:after {
   background: url(/wp-content/uploads/img/detail-arrow.png) no-repeat;
@@ -52,9 +47,28 @@ a.link-home2-blog {
 }
 
 .lc-home2-blog-ttl {
+  p {
+    font-weight: bold;
+    font-size: 2.8rem;
+    display: table;
+  }
+
   h2 {
     font-size: 2.3rem;
     display: table;
+    font-weight: 900;
+  }
+  h2:after {
+    background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
+    background-size: contain;
+  }
+  h2:after, .p-home2-blog-dtl p:after {
+    display: inline-block;
+    width: 2.5rem;
+    height: 3.5rem;
+    margin-left: 10px;
+    content: "";
+    vertical-align: middle;
   }
   span {
     font-size: 1.8rem;
@@ -69,23 +83,12 @@ a.link-home2-blog {
   background: linear-gradient(transparent 50%, #f5ff00 40%);
 }
 
-.lc-home2-blog-ttl h2:after, .p-home2-blog-dtl p:after {
-  display: inline-block;
-  width: 2.5rem;
-  height: 3.5rem;
-  margin-left: 10px;
-  content: "";
-  vertical-align: middle;
-}
 
-.lc-home2-blog-ttl h2:after {
-  background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
-  background-size: contain;
-}
 
-.p-home2-blog-ttl h3 {
+.p-home2-blog-ttl {
+h3 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   &:after {
     background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
@@ -97,6 +100,7 @@ a.link-home2-blog {
     content: "";
     vertical-align: middle;
   }
+}
 }
 
 @media (max-width: 992px) {
