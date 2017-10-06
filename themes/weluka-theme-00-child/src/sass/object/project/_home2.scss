@@ -4,12 +4,6 @@ body{
   color: #000;
 }
 
-h3 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
 .lr-blog-ttl-center {
   margin: auto;
 }
@@ -28,10 +22,25 @@ h3 {
   color: #000;
   p {
     font-weight: bold;
+    font-size: 2.8rem;
+    display: table;   
   }
   a {
     text-decoration: none;
     color: #000;
+    font-size: 1.5rem;
+    &:after {
+      background: url(/wp-content/uploads/img/detail-arrow.png) no-repeat;
+      background-size: contain;
+    }
+  }
+  h2 {
+    font-size: 2.3rem;
+    display: table;
+  }
+  span {
+    font-size: 1.8rem;
+    font-weight:normal;
   }
 }
 
@@ -41,22 +50,6 @@ h3 {
   background: -moz-linear-gradient(transparent 50%, #f5ff00 50%);
   background: -o-linear-gradient(transparent 50%, #f5ff00 50%);
   background: linear-gradient(transparent 50%, #f5ff00 50%);
-  width: fit-content !important;
-  width: -moz-fit-content  !important;
-  width: -webkit-fit-content !important;
-}
-
-.lc-home2-blgo-ttl h2 {
-  font-size: 2.3rem;
-}
-
-h3:after {
-  display: inline-block;
-  width: 2.5rem;
-  height: 3.5rem;
-  margin-left: 10px;
-  content: "";
-  vertical-align: middle;
 }
 
 .lc-home2-blgo-ttl {
@@ -71,31 +64,25 @@ h3:after {
 }
 
 .lc-home2-blgo-ttl {
-  span {
-    font-size: 1.8rem;
-    font-weight:normal;
-  }
   h2:after {
     background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
     background-size: contain;
   }
 }
 
-h3:after {
-  background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
-  background-size: contain;
-}
-
-.lc-home2-blgo-ttl {
-  p {
-    font-size: 2.8rem;
-  }
-  a {
-    font-size: 1.5rem;
-    &:after {
-      background: url(/wp-content/uploads/img/detail-arrow.png) no-repeat;
-      background-size: contain;
-    }
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  &:after {
+    background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 2.5rem;
+    height: 3.5rem;
+    margin-left: 10px;
+    content: "";
+    vertical-align: middle;
   }
 }
 
@@ -144,7 +131,8 @@ h3:after {
   h3:after, .lc-home2-blgo-ttl h2:after, .p-home2-blgo-dtl a:after {
     height: 2rem;
   }
-  .ls-home2-pc--web div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p {
+  .ls-home2-pc div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p,
+  .ls-home2-pc div:hover h2, .ls-home2-pc--wp div:hover h2, .ls-home2-pc--seo div:hover h2 {
     background: none;
   }
   .lc-top-sp-bnr {

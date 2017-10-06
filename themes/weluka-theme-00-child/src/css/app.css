@@ -698,11 +698,6 @@ form.wpcf7-form p {
 body {
   color: #000; }
 
-h3 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold; }
-
 .lr-blog-ttl-center {
   margin: auto; }
 
@@ -717,31 +712,29 @@ h3 {
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   color: #000; }
   .lc-home2-blgo-ttl p {
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 2.8rem;
+    display: table; }
   .lc-home2-blgo-ttl a {
     text-decoration: none;
-    color: #000; }
+    color: #000;
+    font-size: 1.5rem; }
+    .lc-home2-blgo-ttl a:after {
+      background: url(/wp-content/uploads/img/detail-arrow.png) no-repeat;
+      background-size: contain; }
+  .lc-home2-blgo-ttl h2 {
+    font-size: 2.3rem;
+    display: table; }
+  .lc-home2-blgo-ttl span {
+    font-size: 1.8rem;
+    font-weight: normal; }
 
 .ls-home2-pc--web div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p,
 .ls-home2-pc--web div:hover h2, .ls-home2-pc--wp div:hover h2, .ls-home2-pc--seo div:hover h2 {
   background: -webkit-linear-gradient(transparent 50%, #f5ff00 50%);
   background: -moz-linear-gradient(transparent 50%, #f5ff00 50%);
   background: -o-linear-gradient(transparent 50%, #f5ff00 50%);
-  background: linear-gradient(transparent 50%, #f5ff00 50%);
-  width: fit-content !important;
-  width: -moz-fit-content  !important;
-  width: -webkit-fit-content !important; }
-
-.lc-home2-blgo-ttl h2 {
-  font-size: 2.3rem; }
-
-h3:after {
-  display: inline-block;
-  width: 2.5rem;
-  height: 3.5rem;
-  margin-left: 10px;
-  content: "";
-  vertical-align: middle; }
+  background: linear-gradient(transparent 50%, #f5ff00 50%); }
 
 .lc-home2-blgo-ttl h2:after, .lc-home2-blgo-ttl a:after {
   display: inline-block;
@@ -751,26 +744,23 @@ h3:after {
   content: "";
   vertical-align: middle; }
 
-.lc-home2-blgo-ttl span {
-  font-size: 1.8rem;
-  font-weight: normal; }
-
 .lc-home2-blgo-ttl h2:after {
   background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
   background-size: contain; }
 
-h3:after {
-  background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
-  background-size: contain; }
-
-.lc-home2-blgo-ttl p {
-  font-size: 2.8rem; }
-
-.lc-home2-blgo-ttl a {
-  font-size: 1.5rem; }
-  .lc-home2-blgo-ttl a:after {
-    background: url(/wp-content/uploads/img/detail-arrow.png) no-repeat;
-    background-size: contain; }
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold; }
+  h3:after {
+    background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 2.5rem;
+    height: 3.5rem;
+    margin-left: 10px;
+    content: "";
+    vertical-align: middle; }
 
 @media (max-width: 992px) {
   .lc-home2-blgo-ttl h2 {
@@ -798,7 +788,8 @@ h3:after {
     font-size: 1.8rem; }
   h3:after, .lc-home2-blgo-ttl h2:after, .p-home2-blgo-dtl a:after {
     height: 2rem; }
-  .ls-home2-pc--web div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p {
+  .ls-home2-pc div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p,
+  .ls-home2-pc div:hover h2, .ls-home2-pc--wp div:hover h2, .ls-home2-pc--seo div:hover h2 {
     background: none; }
   .lc-top-sp-bnr {
     width: 50%;
