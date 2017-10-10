@@ -14,6 +14,12 @@ jQuery(function() {
 
   });
 
+  jQuery('.navbar-toggle').on('click', function () {
+    jQuery("body").toggleClass("nav-is-open");
+    jQuery('.navbar-toggle').toggleClass("activeNav rotateLeft rotateRight");
+  });
+
+
   jQuery(window).on('load resize', function () {
     var winSize = screen.width;
     if(winSize <= 768){

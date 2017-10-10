@@ -93,6 +93,11 @@ function add_wp_footer_custom(){ ?>
 <?php }
 add_action( 'wp_footer', 'add_wp_footer_custom', 1 );
 
+function register_header_menu() {
+  register_nav_menu('custom-header-menu',__( 'Custom Header Menu' ));
+}
+add_action( 'init', 'register_header_menu' );
+
 
 
 /*-------------------------------------------*/
