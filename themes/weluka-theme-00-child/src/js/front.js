@@ -31,6 +31,9 @@ jQuery(function() {
 
 
     //home2
+
+    jQuery('.lc-home2-webvalue--tile01').css('visibility','visible');
+    jQuery('.lc-home2-webvalue--tile02').css('visibility','visible');
     jQuery('.ls-home2-pc--top').css('visibility','visible'); //表示
     jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn').addClass('fadeFirst fadeDown t-animated');
     jQuery('.p-home2-top--tile02, .lc-home2-webvalue--tile02').addClass('fadeSecond fadeDown t-animated');
@@ -96,7 +99,7 @@ jQuery(function() {
 });
     //frontのみ
     //t-scroll.min.js
-    
+
 /*end.load時にkick*/
 
 /* subJsオブジェクト生成コンストラクタ */

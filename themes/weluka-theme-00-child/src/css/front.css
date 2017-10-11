@@ -1,19 +1,21 @@
 @charset "utf-8";
+
 /*
 管理画面、welukaサイトビルダーでは表示しないCSS
 jQueryのアニメーションで初期状態に非表示にする場合などの使用する。
 */
 
+
 /* 独自cssを追加する場合はこのファイルに記述 */
 
 @media (min-width: 768px) {
-  .ls-top{
-  visibility:hidden
+  .ls-top {
+    visibility: hidden
   }
-
-
-.ls-home2-pc--top{
-  visibility:hidden
+  .lc-home2-webvalue--tile01,.lc-home2-webvalue--tile02{
+    visibility: hidden
+  }
+  .ls-home2-pc--top {
+    visibility: hidden
+  }
 }
-
-  }
