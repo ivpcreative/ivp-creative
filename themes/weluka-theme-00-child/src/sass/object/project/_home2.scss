@@ -14,19 +14,39 @@ margin-top: 150px;
 margin: 120px 10px 0px 10px;
 
 }
-.ls-home2-pc--top,.ls-home2-sp--top{
+.ls-home2-pc--top,.ls-home2-sp--top,.ls-home2-pc--top .weluka-img{
   margin-top: 0px;
+  padding-top:0px;
 }
 
 .ls-page-sentences--web,.ls-page-sentences--seo{
   margin-top: 20px;
 }
 
-.ls-home2--blog{
-  margin: 0px;
+//*画像の拡大*
+
+
+.ls-page-ex img,.ls-page-sample img{
+  -moz-transition: -moz-transform 0.5s linear;
+   -webkit-transition: -webkit-transform 0.5s linear;
+   -o-transition: -o-transform 0.5s linear;
+   -ms-transition: -ms-transform 0.5s linear;
+   transition: transform 0.5s linear;
 }
 
 
+.ls-page-ex img:hover,.ls-page-sample img:hover{
+  -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+//*end.画像の拡大*
+
+.ls-home2--blog{
+  margin: 0px;
+}
 
 .lr-page-ex{
   margin-top: 70px;
@@ -38,7 +58,6 @@ margin: 120px 10px 0px 10px;
 .ls-home2-webvalue{
   margin-top: 20px;
 }
-
 
 
 .ls-home2--webvalue, .ls-home2--service{

@@ -7,7 +7,7 @@
 
 
 function getOptionPass(){
-  $cmp = 'src'; //dest:圧縮　/src:元
+  $cmp = 'dest'; //dest:圧縮　/src:元
   return $cmp;
 }
 
