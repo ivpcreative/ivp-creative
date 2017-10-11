@@ -1,6 +1,16 @@
 /*Component_design
 ※通常、接頭語にc- が必要
 */
+
+
+.breadcrumbs{
+    margin-top: 20px;
+    margin-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.3rem;
+}
+
 .navbar-toggle .icon-bar {
   background-color: #de8834;
   width: 30px;
@@ -60,6 +70,7 @@
   cursor: pointer;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
+  position: static;
 }
 
 .rotateRight {
@@ -72,7 +83,7 @@
 
 .navbar-header {
   position: fixed;
-  z-index: 5;
+  z-index: 9999;
   right: 0;
 }
 
@@ -109,7 +120,7 @@
   transition: visibility 0s 0s;
 }
 
-.cmenu-nav .cmenu-navigation-wrapper, .main-body {
+.cmenu-nav .cmenu-navigation-wrapper, #main {
   -webkit-overflow-scrolling: touch;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -139,9 +150,8 @@
   background-color: #ffa422;
 }
 
-.main-body {
-  position: static;
-  z-index: 2;
+#main {
+  position: static !important;
 }
 
 .nav-is-open .cmenu-nav .cmenu-navigation-wrapper {
@@ -325,11 +335,16 @@
     top: 5%;
     margin-right: 8%;
   }
-  .nav-is-open .main-body {
+  .nav-is-open #main {
     -webkit-transform: translateX(100%);
     -moz-transform: translateX(100%);
     -ms-transform: translateX(100%);
     -o-transform: translateX(100%);
     transform: translateX(100%);
   }
+  .breadcrumbs{
+    margin-top: 20px;
+    margin-bottom: 8px;
+    padding: 0
+}
 }
