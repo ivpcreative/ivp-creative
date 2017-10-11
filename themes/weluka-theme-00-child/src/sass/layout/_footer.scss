@@ -2,3 +2,45 @@
 Layout_footer
 welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr- 、とします。
 */
+
+
+.lr-footer-contact {
+  background: #000;
+  padding: 10px;
+  >div> div {
+    margin: auto;
+  }
+}
+
+.lc-footer-contact {
+  float: none;
+  display: inline-block;
+  width: 100%;
+  p {
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.lc-footer-contact a {
+  padding: 13px 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    color: #000;
+    background: #fff;
+  }
+}
+
+/* 768px以上 */
+@media (min-width: 768px) {
+    .lr-footer-contact {
+        >div> div {
+        max-width: 790px;
+        }
+    }
+    .lc-footer-contact{
+        width: auto;
+    }
+}
