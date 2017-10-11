@@ -64,60 +64,14 @@
 
  // phpQueryをロードする
      require_once("phpQuery-onefile.php");
-
-
-     //display_modal(Basic認証版<Testサイト表示対策>)
-         function display_modal($page){
-         $url = home_url( ).'/' . $page .'/';
-         $basic = array(
-         'User-Agent: My User Agent 1.0',    //ユーザエージェントの指定
-         'Authorization: Basic '.base64_encode('ivpc:Fvakh-z4'),//ベーシック認証
-         );
-
-         $options = array('http' => array(
-         'header' => implode("\r\n", $basic )
-         ));
-         $options = stream_context_create($options);
-
-           $html = file_get_contents(home_url( ).'/'. $page.'/', false, $options);
-           $doc = phpQuery::newDocument($html);
-           return $doc["#include"]->html();
-         }
-
-     /* display_modal(通常版)
-         function display_modal($page){
-           $html = file_get_contents(home_url( ).'/'. $page.'/');
-           $doc = phpQuery::newDocument($html);
-           return $doc["#modal-include"]->html();
-         }
-         */
-
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?php wp_title(); ?></title>
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<?php endif; ?>
 	<?php wp_head(); ?>
-	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/index.css"/>
-
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/jquery.bxslider.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/meanmenu.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/modal.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri()?>/css/iziModal.css"/>
-<link rel="icon" href="<?php echo get_stylesheet_directory_uri()?>images/favicon.ico" type="image/x-icon" />
-<link rel="Shortcut Icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri()?>/images/favicon.ico" />
-<link rel="canonical" href="http://www.ivp.co.jp/" />
-<!--[if lt IE 9]>
-<script src="//api.html5media.info/1.1.8/html5media.min.js"></script>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
 </head>
 <div class="navbar-header clearfix">
   <a class="navbar-toggle">
@@ -126,11 +80,8 @@
   </div>
 
 <div class="cmenu-nav">
-    <div class="cmenu-navigation-wrapper">
-            
-  <?php
-    wp_nav_menu( array( 'theme_location' => 'custom-header-menu', 'menu_class' => 'nav-menu') );
-   ?>
+    <div class="cmenu-navigation-wrapper">            
+  <?php wp_nav_menu( array( 'theme_location' => 'custom-header-menu', 'menu_class' => 'nav-menu') ); ?>
     </div> 
   </div>
   <div class="main-body">
