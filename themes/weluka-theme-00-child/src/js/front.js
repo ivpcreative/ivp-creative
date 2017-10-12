@@ -22,6 +22,8 @@ jQuery(function() {
 
   jQuery(window).on('load resize', function () {
     var winSize = screen.width;
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
     if(winSize <= 768){
 
     }
@@ -40,6 +42,12 @@ jQuery(function() {
     jQuery('.lc-home2-webvalue--tile01').addClass('fadeThird fadeDown t-animated');
     jQuery('.p-home2-top--img02').addClass('fadeFourth fadeDown t-animated');
     jQuery('.lc-home2-top--tile01').addClass('fadeFifth fadeDown t-animated');
+     
+
+     //IEIの確認
+     if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+        jQuery('.lc-home2-service').addClass('t-animated');
+      }
 
 //home
     Tu.tScroll({
