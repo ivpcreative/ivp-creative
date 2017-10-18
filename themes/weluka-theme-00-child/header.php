@@ -26,6 +26,9 @@
 	<title><?php if(isset( $_GET['mode'] ) && $_GET['mode'] === 'cp'){ echo 'Preview'; }else{ wp_title( '|', true, 'right' ); bloginfo('name'); } ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
 	<?php wp_head(); ?>
+	<link rel="stylesheet" href="/wp-content/themes/weluka-theme-00-child/src/css/animate.css">
+	<script src="/wp-content/themes/weluka-theme-00-child/src/js/library/wow.min.js"></script>
+
 </head>
 <?php
 global $post, $welukaContainerClass, $welukaPageSetting, $welukaLayout, $welukaOnepageMode, $welukaRightSidebarNo, $welukaOutContainerType, $welukaThemeOptions;

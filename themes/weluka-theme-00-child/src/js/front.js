@@ -2,6 +2,8 @@
 load時にKICK*/
 
 jQuery(function() {
+         new WOW().init();
+
 
   frontJsObj = new frontJs();
 
@@ -12,98 +14,20 @@ jQuery(function() {
     jQuery('.ls-home2--wp').wrap( "<a class='link-home2-blog' href='/wp'></a>" );
     jQuery('.ls-home2--seo').wrap( "<a class='link-home2-blog' href='/seo'></a>" );
 
-  });
+    jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn,.p-home2-top--tile02, .lc-home2-webvalue--tile02,.lc-home2-webvalue--tile01,.p-home2-top--img02,.lc-home2-top--tile01').addClass('wow slideInDown');
+    jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn,.p-home2-top--tile02, .lc-home2-webvalue--tile02,.lc-home2-webvalue--tile01,.p-home2-top--img02,.lc-home2-top--tile01,.p-home2-service').attr('data-wow-duration','3s');
+    jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn').attr("data-wow-delay","0.4s");
+    jQuery('.p-home2-top--tile02, .lc-home2-webvalue--tile02').attr("data-wow-delay","0.7s");
+    jQuery('.lc-home2-webvalue--tile01').attr("data-wow-delay","0.9s");
+    jQuery('.p-home2-top--img02,.lc-home2-top--tile01').attr("data-wow-delay","1s");
+    jQuery('.p-home2-service').addClass("wow bounceIn");
+
+ });
 
   jQuery('.navbar-toggle').on('click', function () {
     jQuery("body").toggleClass("nav-is-open");
     jQuery('.navbar-toggle').toggleClass("activeNav rotateLeft rotateRight");
   });
-
-
-  jQuery(window).on('load resize', function () {
-    var winSize = screen.width;
-    var ua = window.navigator.userAgent;
-    var msie = ua.indexOf("MSIE ");
-    if(winSize <= 768){
-
-    }
-    else{
-    jQuery('.ls-top').css('visibility','visible'); //表示
-    jQuery('.ls-top').addClass('t-animated'); //開いた瞬間にアニメーションさせる。
-
-
-    //home2
-
-    jQuery('.lc-home2-webvalue--tile01').css('visibility','visible');
-    jQuery('.lc-home2-webvalue--tile02').css('visibility','visible');
-    jQuery('.ls-home2-pc--top').css('visibility','visible'); //表示
-    jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn').addClass('fadeFirst fadeDown t-animated');
-    jQuery('.p-home2-top--tile02, .lc-home2-webvalue--tile02').addClass('fadeSecond fadeDown t-animated');
-    jQuery('.lc-home2-webvalue--tile01').addClass('fadeThird fadeDown t-animated');
-    jQuery('.p-home2-top--img02').addClass('fadeFourth fadeDown t-animated');
-    jQuery('.lc-home2-top--tile01').addClass('fadeFifth fadeDown t-animated');
-     
-
-     //IEIの確認
-     if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
-        jQuery('.lc-home2-service').addClass('t-animated');
-      }
-
-//home
-    Tu.tScroll({
-      't-element': '.ls-top',
-      't-animate': 'rollDown',
-      't-delay': 1
-    })
-
-    Tu.tScroll({
-      't-element': '.c-img',
-      't-animate': ' rollUp'
-    })
-
-//home2
-    Tu.tScroll({
-      't-element': '.fadeFirst',
-      't-animate': 'fadeDown',
-      't-duration':2,
-      't-delay': 0.4
-    })
-
-    Tu.tScroll({
-      't-element': '.fadeSecond',
-      't-animate': 'fadeDown',
-      't-duration':2,
-      't-delay': 0.7
-    })
-
-    Tu.tScroll({
-      't-element': '.fadeThird',
-      't-animate': 'fadeDown',
-      't-duration':2,
-      't-delay': 0.9
-    })
-
-     Tu.tScroll({
-      't-element': '.fadeFourth',
-      't-animate': 'fadeDown',
-      't-duration':2,
-      't-delay': 1
-    })
-
-    Tu.tScroll({
-      't-element': '.fadeFifth',
-      't-animate': 'fadeDown',
-      't-duration':2,
-      't-delay': 1
-    })
-
-    Tu.tScroll({
-      't-element': '.lc-home2-service',
-      't-animate': 'zoomOut',
-      't-duration':0.7
-    })
-  }
-});
 });
     //frontのみ
     //t-scroll.min.js
