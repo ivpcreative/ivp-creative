@@ -16,10 +16,10 @@ jQuery(function() {
 
     jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn,.p-home2-top--tile02, .lc-home2-webvalue--tile02,.lc-home2-webvalue--tile01,.p-home2-top--img02,.lc-home2-top--tile01').addClass('wow slideInDown');
     jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn,.p-home2-top--tile02, .lc-home2-webvalue--tile02,.lc-home2-webvalue--tile01,.p-home2-top--img02,.lc-home2-top--tile01,.p-home2-service').attr('data-wow-duration','3s');
-    jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn').attr("data-wow-delay","0.4s");
-    jQuery('.p-home2-top--tile02, .lc-home2-webvalue--tile02').attr("data-wow-delay","0.7s");
-    jQuery('.lc-home2-webvalue--tile01').attr("data-wow-delay","0.9s");
-    jQuery('.p-home2-top--img02,.lc-home2-top--tile01').attr("data-wow-delay","1s");
+    jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn').css("animation-delay","400ms");
+    jQuery('.p-home2-top--tile02, .lc-home2-webvalue--tile02').css("animation-delay","700ms");
+    jQuery('.lc-home2-webvalue--tile01').css("animation-delay","900ms");
+    jQuery('.p-home2-top--img02,.lc-home2-top--tile01').css("animation-delay","1000ms");
     jQuery('.p-home2-service').addClass("wow bounceIn");
 
  });
