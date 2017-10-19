@@ -2,35 +2,40 @@
 load時にKICK*/
 
 jQuery(function() {
-         new WOW().init();
 
+
+  new WOW().init(); //アニメーションJS 初期化
 
   frontJsObj = new frontJs();
 
   var url = window.location;
 
-  jQuery(document).on('ready', function () {
-    jQuery('.ls-home2--web').wrap( "<a class='link-home2-blog' href='/web'></a>" );
-    jQuery('.ls-home2--wp').wrap( "<a class='link-home2-blog' href='/wp'></a>" );
-    jQuery('.ls-home2--seo').wrap( "<a class='link-home2-blog' href='/seo'></a>" );
 
+  jQuery(document).on('ready', function() {
+    jQuery('.ls-home2--web').wrap("<a class='link-home2-blog' href='/web'></a>");
+    jQuery('.ls-home2--wp').wrap("<a class='link-home2-blog' href='/wp'></a>");
+    jQuery('.ls-home2--seo').wrap("<a class='link-home2-blog' href='/seo'></a>");
+
+    /* WOW JS*/
     jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn,.p-home2-top--tile02, .lc-home2-webvalue--tile02,.lc-home2-webvalue--tile01,.p-home2-top--img02,.lc-home2-top--tile01').addClass('wow slideInDown');
-    jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn,.p-home2-top--tile02, .lc-home2-webvalue--tile02,.lc-home2-webvalue--tile01,.p-home2-top--img02,.lc-home2-top--tile01,.p-home2-service').attr('data-wow-duration','3s');
-    jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn').css("animation-delay","400ms");
-    jQuery('.p-home2-top--tile02, .lc-home2-webvalue--tile02').css("animation-delay","700ms");
-    jQuery('.lc-home2-webvalue--tile01').css("animation-delay","900ms");
-    jQuery('.p-home2-top--img02,.lc-home2-top--tile01').css("animation-delay","1000ms");
-    jQuery('.p-home2-service').addClass("wow bounceIn");
+    jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn,.p-home2-top--tile02, .lc-home2-webvalue--tile02,.lc-home2-webvalue--tile01,.p-home2-top--img02,.lc-home2-top--tile01,.p-home2-service').attr('data-wow-duration', '3s');
+    jQuery('.p-home2-top--img01, .p-home2-top--logo, .p-home2-top--btn').css("animation-delay", "400ms");
+    jQuery('.p-home2-top--tile02, .lc-home2-webvalue--tile02').css("animation-delay", "700ms");
+    jQuery('.lc-home2-webvalue--tile01').css("animation-delay", "900ms");
+    jQuery('.p-home2-top--img02,.lc-home2-top--tile01').css("animation-delay", "1000ms");
+    jQuery('.p-home2-service').addClass("wow bounceIn"); //アイコン
+    /* end.WOW JS*/
+  });
 
- });
-
-  jQuery('.navbar-toggle').on('click', function () {
+  /*header-menu*/
+  jQuery('.navbar-toggle').on('click', function() {
     jQuery("body").toggleClass("nav-is-open");
     jQuery('.navbar-toggle').toggleClass("activeNav rotateLeft rotateRight");
+    /* end.header-menu*/
   });
 });
-    //frontのみ
-    //t-scroll.min.js
+//frontのみ
+//t-scroll.min.js
 
 /*end.load時にkick*/
 

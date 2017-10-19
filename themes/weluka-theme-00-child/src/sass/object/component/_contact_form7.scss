@@ -4,6 +4,7 @@
 
 /*contact form 7*/
 
+
 .contactform-accept {
     text-align: center;
 }
@@ -34,31 +35,37 @@ form.wpcf7-form p {
     padding: 5px;
 }
 
-.wpcf7 .c-wpcf7-1form {
-    /*名前等70%列*/
-    width: 70%;
-}
 
-.wpcf7 .c-wpcf7-2form {
-    /*名前等2列*/
-    width: 45%;
-}
 
-.wpcf7 .c-wpcf7-3form {
-    /*名前等2列*/
-    width: 28%;
-}
-
-.wpcf7 .c-wpcf7-4form {
-    /*名前等2列*/
-    width: 19%;
-}
-
-.wpcf7 form.wpcf7-form .c-wpcf7-name {
+.c-wpcf7-name {
     margin-bottom: 0px;
 }
 
-.wpcf7 form.wpcf7-form .c-wpcf7-input {
+.c-wpcf7-input {
     margin-top: 0px;
     margin-bottom: 2px;
+}
+
+.c-wpcf7note{
+
+  color: #fff;
+  font-size: 11px;
+  padding: 5px 6px;
+  margin-right: 5px;
+
+}
+.c-wpcf7note-req{
+    background: #FE624C ;
+
+  }
+
+  .c-wpcf7note-any{
+    background: #3B5799 ;
+  }
+
+  /* 768px以上 */
+  @media (min-width: 768px){
+  .lc-contact{
+    padding:0px 100px;
+  }
 }

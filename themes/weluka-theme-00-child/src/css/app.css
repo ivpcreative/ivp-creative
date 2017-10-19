@@ -131,6 +131,36 @@ a:hover {
 Layout_footer
 welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr- 、とします。
 */
+.lr-footer-contact {
+  background: #000;
+  padding: 10px; }
+  .lr-footer-contact > div > div {
+    margin: auto; }
+
+.lc-footer-contact {
+  float: none;
+  display: inline-block;
+  width: 100%; }
+  .lc-footer-contact p {
+    color: #fff;
+    text-align: center; }
+
+.lc-footer-contact a {
+  padding: 13px 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none; }
+  .lc-footer-contact a:hover {
+    color: #000;
+    background: #fff; }
+
+/* 768px以上 */
+@media (min-width: 768px) {
+  .lr-footer-contact > div > div {
+    max-width: 790px; }
+  .lc-footer-contact {
+    width: auto; } }
+
 /*
 Layout_header
 welukaの3パーツの接頭語は、Section = ls- 、 column = lc- 、row = lr- 、とします。
@@ -196,6 +226,10 @@ Section
 .ls-contact {
   padding: 1rem; }
 
+.ls-home2-pc {
+  margin-bottom: 20px; }
+
+/*home2*/
 /*Row*/
 .lr-main--bg02 {
   background-color: #39ACCD; }
@@ -252,7 +286,14 @@ colmun
   .single-post .weluka-container-fluid,
   .archive .weluka-container-fluid {
     max-width: 100%;
-    width: 1170px; } }
+    width: 1170px; }
+  .ls-home2-pc--service {
+    margin: 0 200px 0 200px; } }
+
+/*1200px以上*/
+@media (min-width: 1200px) {
+  .ls-home2-pc--service {
+    margin: 0 400px 0 400px; } }
 
 /*
 Layout_sidebar
@@ -403,32 +444,180 @@ form.wpcf7-form p {
   margin: 0 0 30px;
   padding: 5px; }
 
-.wpcf7 .c-wpcf7-1form {
-  /*名前等70%列*/
-  width: 70%; }
-
-.wpcf7 .c-wpcf7-2form {
-  /*名前等2列*/
-  width: 45%; }
-
-.wpcf7 .c-wpcf7-3form {
-  /*名前等2列*/
-  width: 28%; }
-
-.wpcf7 .c-wpcf7-4form {
-  /*名前等2列*/
-  width: 19%; }
-
-.wpcf7 form.wpcf7-form .c-wpcf7-name {
+.c-wpcf7-name {
   margin-bottom: 0px; }
 
-.wpcf7 form.wpcf7-form .c-wpcf7-input {
+.c-wpcf7-input {
   margin-top: 0px;
   margin-bottom: 2px; }
+
+.c-wpcf7note {
+  color: #fff;
+  font-size: 11px;
+  padding: 5px 6px;
+  margin-right: 5px; }
+
+.c-wpcf7note-req {
+  background: #FE624C; }
+
+.c-wpcf7note-any {
+  background: #3B5799; }
+
+/* 768px以上 */
+@media (min-width: 768px) {
+  .lc-contact {
+    padding: 0px 100px; } }
 
 /*Component_design
 ※通常、接頭語にc- が必要
 */
+.breadcrumbs {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.3rem; }
+
+.navbar-toggle .icon-bar {
+  background-color: #de8834;
+  width: 30px;
+  height: 3px;
+  content: '';
+  display: block;
+  transform: translate3d(-50%, -4px, 0);
+  -webkit-transform: translate3d(-50%, -4px, 0);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  position: absolute; }
+  .navbar-toggle .icon-bar:before, .navbar-toggle .icon-bar:after {
+    background-color: #de8834;
+    width: 30px;
+    height: 3px;
+    content: '';
+    display: block;
+    transform: translate3d(-50%, -4px, 0);
+    -webkit-transform: translate3d(-50%, -4px, 0);
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    position: absolute; }
+  .navbar-toggle .icon-bar:before {
+    transform: translate3d(0, -8px, 0);
+    -webkit-transform: translate3d(0, -8px, 0); }
+  .navbar-toggle .icon-bar:after {
+    transform: translate3d(0, 9px, 0);
+    -webkit-transform: translate3d(0, 9px, 0); }
+
+.nav-is-open .navbar-toggle .icon-bar {
+  background-color: transparent; }
+  .nav-is-open .navbar-toggle .icon-bar:before {
+    -ms-transform: translateX(0) rotate(45deg);
+    transform: translateX(0) rotate(45deg);
+    -webkit-transform: translateX(0) rotate(45deg);
+    top: 0; }
+  .nav-is-open .navbar-toggle .icon-bar:after {
+    -ms-transform: translateX(0) translateY(-10px) rotate(-45deg);
+    transform: translateX(0) translateY(-10px) rotate(-45deg);
+    -webkit-transform: translateX(0) translateY(-10px) rotate(-45deg);
+    top: 10px; }
+
+.navbar-header .navbar-toggle {
+  display: block;
+  background-color: #fff;
+  border-radius: 0;
+  padding: 25px;
+  transition: 1s ease-in-out;
+  margin: 0;
+  cursor: pointer;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  position: static; }
+
+.rotateRight {
+  transform: rotate(180deg); }
+
+.rotateLeft {
+  transform: rotate(-180deg); }
+
+.navbar-header {
+  position: fixed;
+  z-index: 9999;
+  right: 0; }
+
+.nav-menu li {
+  text-decoration: none;
+  list-style: none;
+  margin: 10px 0; }
+  .nav-menu li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff; }
+
+.nav-is-open {
+  overflow: hidden; }
+
+.cmenu-nav {
+  position: fixed;
+  z-index: 1;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 0.7s;
+  -moz-transition: visibility 0s 0.7s;
+  transition: visibility 0s 0.7s;
+  height: 100%;
+  width: 100%; }
+
+.nav-is-open .cmenu-nav {
+  visibility: visible;
+  -webkit-transition: visibility 0s 0s;
+  -moz-transition: visibility 0s 0s;
+  transition: visibility 0s 0s; }
+
+.cmenu-nav .cmenu-navigation-wrapper, #main {
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  transition: transform 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
+  -moz-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
+  transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99); }
+
+.cmenu-nav .cmenu-navigation-wrapper {
+  padding: 55px 0 0 15px;
+  height: 100%;
+  overflow-y: auto;
+  opacity: 0.95;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  background-color: #ffa422; }
+
+#main {
+  position: static !important; }
+
+.nav-is-open .cmenu-nav .cmenu-navigation-wrapper {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  transition: transform 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
+  -moz-transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
+  transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
+  overflow: hidden;
+  height: 100%;
+  width: 100%; }
+
 /* ハンバーガーメニュー調整 767以下(特殊モバイル用設定)*/
 @media (max-width: 767px) {
   .header-menu-clm .weluka-wpmenu {
@@ -552,7 +741,30 @@ form.wpcf7-form p {
   .c-ttl {
     width: 70%; }
   .navbar-brand {
-    display: none; } }
+    display: none; }
+  .nav-menu li {
+    margin: 20px 0; }
+    .nav-menu li a {
+      font-size: 30px;
+      opacity: 0.5; }
+      .nav-menu li a:hover {
+        opacity: 1; }
+  .cmenu-nav .cmenu-navigation-wrapper {
+    padding: 8% 0 0 5%;
+    opacity: 1; }
+  .navbar-header {
+    top: 5%;
+    margin-right: 8%; }
+  .nav-is-open #main {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%); }
+  .breadcrumbs {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    padding: 0; } }
 
 .wpp-list {
   counter-reset: wpp-ranking; }
@@ -589,7 +801,16 @@ form.wpcf7-form p {
   margin: auto; }
 
 .p-web-ttl {
+  color: #FF8C7A;
   font-weight: bold;
+  text-align: left; }
+
+.p-web-ttl--sample {
+  font-size: 2.5rem;
+  text-align: center; }
+
+.p-web-ttl--refer {
+  color: #000000;
   text-align: center; }
 
 .p-top--note {
@@ -698,45 +919,103 @@ form.wpcf7-form p {
 body {
   color: #000; }
 
+/*
+.ls-home2--service,.ls-home2--web,.ls-home2-blog ,.ls-home2--wp,.ls-home2-access.ls-home2--seo{
+margin-top: 150px;
+
+}
+*/
+.ls-home2, .ls-page-merit, .ls-page-sentences, .ls-page-sample, .ls-page-ex {
+  margin: 120px 10px 0px 10px; }
+
+.ls-home2-pc--top, .ls-home2-sp--top, .ls-home2-pc--top .weluka-img {
+  margin-top: 0px;
+  padding-top: 0px; }
+
+.ls-page-sentences--web, .ls-page-sentences--seo {
+  margin-top: 20px; }
+
+.ls-home2--service, .ls-home2--service {
+  margin-top: 60px; }
+
+.ls-page-ex img, .ls-page-sample img {
+  -moz-transition: -moz-transform 0.5s linear;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  -o-transition: -o-transform 0.5s linear;
+  -ms-transition: -ms-transform 0.5s linear;
+  transition: transform 0.5s linear; }
+
+.ls-page-ex img:hover, .ls-page-sample img:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2); }
+
+.lr-page-ex {
+  margin-top: 70px; }
+
+.lr-page-ex--01 {
+  margin-top: 20px; }
+
+.ls-home2-webvalue {
+  margin-top: 20px; }
+
+.ls-home2--webvalue, .ls-home2--service {
+  padding: 0; }
+
+.lc-top-sp-bnr {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top; }
+
+.lc-top-sp-bnr1 {
+  padding-right: 0; }
+  .lc-top-sp-bnr1 div:nth-child(1) {
+    padding: 8% 25% 9% 5%; }
+  .lc-top-sp-bnr1 div:nth-child(3) {
+    margin-top: 10px; }
+
+.lc-top-sp-bnr2 div:nth-child(2) {
+  float: right;
+  padding: 0 22px; }
+
 .lr-blog-ttl-center {
   margin: auto; }
 
 .ls-home2-blog .lr-main {
   margin-bottom: 0; }
 
-.lc-home2-img-ttl {
-  position: absolute;
-  top: 10%; }
+.p-home2-blog-dtl {
+  font-weight: bold; }
+  .p-home2-blog-dtl p:after {
+    background: url(/wp-content/uploads/img/detail-arrow.png) no-repeat;
+    background-size: contain; }
 
-.lc-home2-blgo-ttl {
+.lc-home2-blog-ttl h2, .lc-home2-blog-ttl p, .p-home2-blog-dtl p {
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   color: #000; }
-  .lc-home2-blgo-ttl p {
-    font-weight: bold;
-    font-size: 2.8rem;
-    display: table; }
-  .lc-home2-blgo-ttl a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1.5rem; }
-    .lc-home2-blgo-ttl a:after {
-      background: url(/wp-content/uploads/img/detail-arrow.png) no-repeat;
-      background-size: contain; }
-  .lc-home2-blgo-ttl h2 {
-    font-size: 2.3rem;
-    display: table; }
-  .lc-home2-blgo-ttl span {
-    font-size: 1.8rem;
-    font-weight: normal; }
 
-.ls-home2-pc--web div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p,
-.ls-home2-pc--web div:hover h2, .ls-home2-pc--wp div:hover h2, .ls-home2-pc--seo div:hover h2 {
-  background: -webkit-linear-gradient(transparent 50%, #f5ff00 50%);
-  background: -moz-linear-gradient(transparent 50%, #f5ff00 50%);
-  background: -o-linear-gradient(transparent 50%, #f5ff00 50%);
-  background: linear-gradient(transparent 50%, #f5ff00 50%); }
+a.link-home2-blog {
+  text-decoration: none;
+  color: #000; }
 
-.lc-home2-blgo-ttl h2:after, .lc-home2-blgo-ttl a:after {
+.lc-home2-blog-ttl p {
+  font-weight: bold;
+  display: table; }
+
+.lc-home2-blog-ttl h2 {
+  font-weight: bold;
+  display: table; }
+  .lc-home2-blog-ttl h2:after {
+    background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
+    background-size: contain; }
+
+.p-home2-blog-ttl h3:after {
+  background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
+  background-size: contain; }
+
+.lc-home2-blog-ttl h2:after, .p-home2-blog-dtl p:after, .p-home2-blog-ttl h3:after {
   display: inline-block;
   width: 2.5rem;
   height: 3.5rem;
@@ -744,69 +1023,62 @@ body {
   content: "";
   vertical-align: middle; }
 
-.lc-home2-blgo-ttl h2:after {
-  background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
-  background-size: contain; }
+.lc-home2-blog-ttl h2 {
+  font-size: 1.6rem; }
 
-h3 {
+.lc-home2-blog-ttl p {
+  margin-bottom: 1rem;
+  font-size: 1.8rem; }
+
+.lc-home2-blog-ttl span {
+  font-size: 1.4rem;
+  font-weight: normal; }
+
+.p-home2-blog-ttl h3 {
   text-align: center;
-  font-size: 2rem;
-  font-weight: bold; }
-  h3:after {
-    background: url(/wp-content/uploads/img/ttl-line.png) no-repeat;
-    background-size: contain;
-    display: inline-block;
-    width: 2.5rem;
-    height: 3.5rem;
-    margin-left: 10px;
-    content: "";
-    vertical-align: middle; }
+  font-weight: bold;
+  font-size: 1.8rem; }
 
-@media (max-width: 992px) {
-  .lc-home2-blgo-ttl h2 {
-    font-size: 1.8rem; }
-  .lc-home2-blgo-ttl p {
-    font-size: 2.2rem; }
-  .lc-home2-blgo-ttl a {
-    font-size: 1.5rem; }
-  h3:after {
-    height: 2.5rem; }
-  .lc-home2-blgo-ttl h2:after, .lc-home2-blgo-ttl a:after {
-    height: 2.5rem; } }
+.lc-home2-service {
+  width: 33.33%;
+  display: inline-block; }
 
-@media (max-width: 768px) {
-  h3 {
-    font-size: 1.8rem; }
+@media (min-width: 768px) {
+  .p-home2-blog-dtl {
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+    display: table; }
+    .p-home2-blog-dtl p {
+      font-size: 1.7rem; }
   .lc-home2-img-ttl {
-    top: 0; }
-  .lc-home2-blgo-ttl p {
-    margin-bottom: 1rem;
-    font-size: 2rem; }
-  .lc-home2-blgo-ttl span {
-    font-size: 1.4rem; }
-  .lc-home2-blgo-ttl h2 {
-    font-size: 1.8rem; }
-  h3:after, .lc-home2-blgo-ttl h2:after, .p-home2-blgo-dtl a:after {
-    height: 2rem; }
-  .ls-home2-pc div:hover p, .ls-home2-pc--wp div:hover p, .ls-home2-pc--seo div:hover p,
-  .ls-home2-pc div:hover h2, .ls-home2-pc--wp div:hover h2, .ls-home2-pc--seo div:hover h2 {
-    background: none; }
-  .lc-top-sp-bnr {
-    width: 50%;
-    display: inline-block;
-    vertical-align: top; }
-  .lc-top-sp-bnr1 {
-    padding-right: 0; }
-    .lc-top-sp-bnr1 div:nth-child(1) {
-      padding: 8% 25% 9% 5%; }
-    .lc-top-sp-bnr1 div:nth-child(3) {
-      margin-top: 10px; }
-  .lc-top-sp-bnr2 div:nth-child(2) {
-    float: right;
-    padding: 0 22px; }
-  .lc-home2-service {
-    width: 33.33%;
-    display: inline-block; } }
+    position: absolute;
+    top: 10%;
+    z-index: 999; }
+  .lc-home2-blog-ttl p {
+    font-size: 3rem; }
+  .lc-home2-blog-ttl h2 {
+    font-size: 3rem;
+    font-size: 2.3rem; }
+    .lc-home2-blog-ttl h2:after {
+      width: 2.5rem; }
+  .p-home2-blog-dtl p:after {
+    width: 2.5rem; }
+  .p-home2-blog-ttl h3 {
+    font-size: 2.5rem; }
+  .ls-home2--web div:hover p, .ls-home2--wp div:hover p, .ls-home2--seo div:hover p, .ls-home2--web div:hover span {
+    background: -webkit-linear-gradient(transparent 50%, #f5ff00 40%);
+    background: -moz-linear-gradient(transparent 50%, #f5ff00 40%);
+    background: -o-linear-gradient(transparent 50%, #f5ff00 40%);
+    background: linear-gradient(transparent 50%, #f5ff00 40%); }
+  .lc-home2-blog-ttl span {
+    font-size: 1.8rem; } }
+
+@media (min-width: 992px) {
+  .p-home2-service--icon1 {
+    padding-left: 160px; }
+  .p-home2-service--icon3 {
+    padding-right: 160px; } }
 
 /*project_p-design
 */

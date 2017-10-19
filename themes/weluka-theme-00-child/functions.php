@@ -13,13 +13,12 @@ function getOptionPass(){
 
 function add_file_links() {
       $cmp =  getOptionPass();
-wp_enqueue_style( 'child-app-css', get_stylesheet_directory_uri() .'/'. $cmp .'/css/app.css' ); //CSS
-wp_enqueue_style( 'child-t-scroll-css', get_stylesheet_directory_uri() .'/'. $cmp .'/css/t-scroll.min.css' ); //CSS
-    //wp_enqueue_script( 'child-library-jquery-fixHeightSimple', get_stylesheet_directory_uri() . '/js/library/jquery-fixHeightSimple.js' ); // 行の高さをそろえるプラグイン
-    wp_enqueue_script( 'child-library-jquery-rwdImageMaps', get_stylesheet_directory_uri() . '/'. $cmp .'/js/library/jquery.rwdImageMaps.min.js' ); // イメージマップをレスポンシブ対応させる
-      wp_enqueue_script( 'child-library-jquery-t-scrool', get_stylesheet_directory_uri() . '/'. $cmp .'/js/library/t-scroll.min.js' ); // イメージマップをレスポンシブ対応させる
-    //wp_enqueue_script( 'child-library-jquery-scroll', get_stylesheet_directory_uri() . '/'. $cmp .'/js/library/t-scroll.js' ); // 動きを出す
-    wp_enqueue_script( 'child-common-js', get_stylesheet_directory_uri() . '/'. $cmp .'/js/common.js' ); //JS
+      wp_enqueue_style( 'child-app-css', get_stylesheet_directory_uri() .'/'. $cmp .'/css/app.css' ); //CSS
+      wp_enqueue_style( 'child-animate-css', get_stylesheet_directory_uri() .'/'. $cmp .'/css/animate.css' ); //アニメーション用CSS(WoW.jSとセット)
+      //wp_enqueue_script( 'child-library-jquery-fixHeightSimple', get_stylesheet_directory_uri() . '/js/library/jquery-fixHeightSimple.js' ); // 行の高さをそろえるプラグイン
+      wp_enqueue_script( 'child-library-jquery-rwdImageMaps', get_stylesheet_directory_uri() . '/'. $cmp .'/js/library/jquery.rwdImageMaps.min.js' ); // イメージマップをレスポンシブ対応させる
+      wp_enqueue_script( 'child-library-jquery-wow', get_stylesheet_directory_uri() . '/'. $cmp .'/js/library/wow.min.js' ); // アニメーション用JS(animate.css とセット)
+      wp_enqueue_script( 'child-common-js', get_stylesheet_directory_uri() . '/'. $cmp .'/js/common.js' ); //JS
 
 }
 
