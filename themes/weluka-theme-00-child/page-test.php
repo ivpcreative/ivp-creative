@@ -1,4 +1,4 @@
-<?php
+<?php /* Template Name: page-test */
 require_once dirname(__FILE__) .('\simplehtmldom\simple_html_dom.php');
 
 // Create DOM from URL
