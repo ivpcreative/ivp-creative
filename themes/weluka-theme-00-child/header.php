@@ -26,8 +26,6 @@
 	<title><?php if(isset( $_GET['mode'] ) && $_GET['mode'] === 'cp'){ echo 'Preview'; }else{ wp_title( '|', true, 'right' ); bloginfo('name'); } ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
 	<?php wp_head(); ?>
-	<link rel="stylesheet" href="/wp-content/themes/weluka-theme-00-child/src/css/animate.css">
-	<script src="/wp-content/themes/weluka-theme-00-child/src/js/library/wow.min.js"></script>
 
 </head>
 <?php
@@ -113,8 +111,8 @@ if( ! $_hideHeader ) :
 
 </header>
   		<div class="cmenu-nav">
-  		    <div class="cmenu-navigation-wrapper"> 
-  		    <?php wp_nav_menu( array( 'theme_location' => 'custom-header-menu', 'menu_class' => 'nav-menu') ); ?> </div> 
+  		    <div class="cmenu-navigation-wrapper">
+  		    <?php wp_nav_menu( array( 'theme_location' => 'custom-header-menu', 'menu_class' => 'nav-menu') ); ?> </div>
   		</div>
 <?php endif; //_hideHeader endif ?>
 
@@ -241,4 +239,3 @@ bcn_display();
 echo '</div>';
 }
 ?>
-
