@@ -1,18 +1,29 @@
 <?php
+require_once dirname(__FILE__) .('\simplehtmldom\simple_html_dom.php');
+
+// Create DOM from URL
+
 /*
-Template Name:page-test
+$html = file_get_html('https://www.ivp.co.jp/');
+
+$list = $html->find('.sf-menu li');
+
+foreach($list as $li) 
+   {
+        echo $li;
+    }
+
 */
-//get_header();
-global $weluka_themename;
-wp_head();
 
-if ( have_posts() ) :
-		get_template_part( 'content', get_post_format() );
-?>
-<?php
-else:
-	get_template_part( 'content', 'none' );
+$url = file_get_html('https://shop-list.com/all/svc/product/Search/?keyword=%83j%83b%83g');
 
-endif;
-wp_footer();
+$items = $url->find('.listProduct li');
+
+foreach($items as $item) 
+   {
+        $Genre = $item->find('.genre',0);
+         echo  $Genre ;
+    }
+
+
 ?>
